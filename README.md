@@ -31,7 +31,161 @@ creative AI assistants, intelligent photo retouching, and image restoration.
 | 2025 | **JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration** | Intelligent image restoration agent | Yunlong Lin et al. | CVPR 2025 | [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) / [Code](https://github.com/LYL1015/JarvisIR) / [Demo](https://huggingface.co/spaces/LYL1015/JarvisIR) |
 
 ---
+# 1. Datasets
 
+This section summarizes the public datasets and benchmarks associated with the Jarvis series, including
+instruction-driven photo retouching, intelligent image editing, and adverse-weather image restoration.
+
+---
+
+## Summary
+
+| Dataset | Related Project | Type | Scale / Content | Main Purpose | Links |
+|---|---|---|---|---|---|
+| **MMArt-PPR10K** | JarvisArt | Multimodal paired retouching dataset | Built upon PPR10K; paired before/after images, user instructions, Lua/XMP editing configurations | Training instruction-driven photo retouching agents | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k) / [Paper](https://arxiv.org/abs/2506.17612) |
+| **MMArt-Bench** | JarvisArt | Real-world retouching benchmark | 200 benchmark instances across 4 major scenarios, with an additional portrait subset for region-level evaluation | Evaluating intelligent photo retouching and content fidelity | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-Bench) / [Paper](https://arxiv.org/abs/2506.17612) |
+| **ArtEdit-Bench** | JarvisEvo | Image editing benchmark | Benchmark for preservative and instruction-following image editing | Evaluating self-evolving image editing agents | [Dataset](https://huggingface.co/datasets/JarvisEvo/ArtEdit-Bench) / [Paper](https://arxiv.org/abs/2511.23002) |
+| **CleanBench** | JarvisIR | Synthetic + real adverse-weather restoration dataset | 150K synthetic + 80K real instruction-response pairs; public release also includes CleanBench-Real-80K and paper test data | Training and evaluating intelligent restoration agents for autonomous-driving perception | [Dataset](https://huggingface.co/datasets/LYL1015/CleanBench) / [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) |
+
+---
+
+## MMArt-PPR10K
+
+**Related Project:** JarvisArt  
+**Paper:** JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent  
+**Task:** Instruction-driven professional photo retouching  
+**Type:** Multimodal paired image-retouching dataset  
+**Source:** Built upon the PPR10K dataset  
+**Content:** Original images, retouched images, user instructions, Lightroom Lua configurations, and XMP editing presets
+
+**English introduction:**  
+MMArt-PPR10K is a multimodal dataset developed for research on instruction-driven agentic photo retouching. It is built upon the original PPR10K dataset and augments paired before-and-after image data with user instructions and structured Lightroom editing information. Each sample contains an original image, a processed image, user instructions of different lengths, and corresponding Lua/XMP configuration files that describe the editing operations used in Lightroom.
+
+The dataset is designed to support the training of intelligent photo-retouching agents that must understand natural-language editing requests and translate them into professional editing actions. Compared with conventional paired image datasets that only provide input-output image pairs, MMArt-PPR10K additionally provides explicit user intentions and editable tool configurations, making it suitable for studying multimodal reasoning, tool use, and instruction-following in image-retouching agents. citeturn256576search4turn256576search6
+
+**中文简介：**  
+MMArt-PPR10K 是 JarvisArt 面向**指令驱动专业修图 Agent**构建的多模态数据集，基于原始 PPR10K 数据集进一步扩展而来。与传统只包含输入图像和目标图像的数据集不同，MMArt-PPR10K 在原图与编辑结果之外，还提供不同长度的用户编辑指令，以及 Lightroom 对应的 Lua 配置文件和 XMP 编辑预设。
+
+这些信息能够更加完整地描述“用户想要什么”以及“专业修图工具具体做了什么”，因此特别适合训练能够理解自然语言意图并调用专业编辑工具的多模态智能体。该数据集不仅可以用于图像到图像学习，还能够支持图像理解、自然语言指令解析、工具调用以及多模态 Chain-of-Thought 等研究方向。citeturn256576search4turn256576search6
+
+**Dataset Structure:**
+
+- `before.jpg` — original unedited image
+- `processed.jpg` — retouched image
+- `user_want_short` — short user instruction
+- `user_want_middle` — medium-length user instruction
+- `user_want_long` — detailed user instruction
+- `config.lua` — Lightroom Lua configuration
+- `config.xmp` — XMP metadata and editing preset
+
+**Links:**  
+[Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k) /
+[Paper](https://arxiv.org/abs/2506.17612) /
+[Project](https://jarvisart.vercel.app/) /
+[Code](https://github.com/LYL1015/JarvisArt)
+
+---
+
+## MMArt-Bench
+
+**Related Project:** JarvisArt  
+**Paper:** JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent  
+**Task:** Intelligent photo-retouching evaluation  
+**Type:** Real-world multimodal benchmark  
+**Scale:** 200 benchmark instances across four major scenarios; additional portrait subset for region-level evaluation  
+**Scenarios:** Portrait, landscape, street scenes, and still life
+
+**English introduction:**  
+MMArt-Bench is the evaluation benchmark introduced for JarvisArt to assess the performance of intelligent photo-retouching agents under realistic editing scenarios. The benchmark is sampled from the broader MMArt data collection and covers four major categories: portrait photography, landscape photography, street scenes, and still life.
+
+Each category contains 50 evaluation instances, resulting in 200 primary benchmark cases. For region-level evaluation, the benchmark additionally provides a portrait subset containing 50 human-centered images with mask annotations. This design enables evaluation not only of overall image-editing quality, but also of localized editing behavior and content preservation.
+
+MMArt-Bench is particularly useful for evaluating whether an editing agent can follow user instructions while preserving the structural and semantic content of the original image, rather than simply producing visually appealing but uncontrolled modifications. citeturn256576search3
+
+**中文简介：**  
+MMArt-Bench 是 JarvisArt 提出的**智能照片修饰评测基准**，用于评估多模态修图 Agent 在真实编辑场景中的指令遵循能力、图像质量以及内容保持能力。
+
+该基准从 MMArt 数据中采样得到，覆盖四类主要场景：**人像、风景、街景和静物**，每个大类包含 50 个样本，共计 200 个主要评测实例。此外，为了进一步评估局部编辑能力，MMArt-Bench 还提供一个包含 50 张人物图像及 Mask 标注的人像子集，可用于 Region-Level Evaluation。
+
+与仅评价最终图像视觉效果的传统指标不同，MMArt-Bench 更强调智能体在执行复杂用户指令时，能否同时保证原始图像结构、主体内容以及局部区域的一致性，因此非常适合评估具有工具调用和多阶段决策能力的专业修图 Agent。citeturn256576search3
+
+**Links:**  
+[Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-Bench) /
+[Paper](https://arxiv.org/abs/2506.17612) /
+[Project](https://jarvisart.vercel.app/) /
+[Code](https://github.com/LYL1015/JarvisArt)
+
+---
+
+## ArtEdit-Bench
+
+**Related Project:** JarvisEvo  
+**Paper:** JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization  
+**Task:** Intelligent image editing evaluation  
+**Type:** Image-editing benchmark  
+**Evaluation Focus:** Instruction following, preservative editing, and content fidelity
+
+**English introduction:**  
+ArtEdit-Bench is the image-editing benchmark used to evaluate JarvisEvo and other intelligent editing systems. It focuses on the ability of editing agents to perform requested visual modifications while preserving image content that should remain unchanged.
+
+The benchmark is particularly relevant to self-evolving editing agents because it evaluates both editing effectiveness and preservation. JarvisEvo reports results on preservative editing metrics and pixel-level content fidelity, making ArtEdit-Bench suitable for assessing whether an agent can improve the requested regions or attributes without unnecessarily altering unrelated visual content.
+
+ArtEdit-Bench therefore provides an evaluation setting for studying the balance between instruction following, editing quality, and content preservation in multimodal image-editing agents.
+
+**中文简介：**  
+ArtEdit-Bench 是 JarvisEvo 使用的**智能图像编辑评测基准**，重点考察编辑 Agent 在执行用户指令的同时，是否能够保持原图中无需修改的内容。
+
+对于智能图像编辑任务而言，仅仅完成目标编辑并不足够。如果 Agent 在修改指定区域时同时改变了背景、人物身份、纹理或其他无关信息，则说明其编辑可控性仍然存在问题。因此 ArtEdit-Bench 特别强调 **Preservative Editing（保持式编辑）** 和 **Content Fidelity（内容保真度）**。
+
+JarvisEvo 在该基准上报告了保持式编辑指标和像素级内容保真表现，因此 ArtEdit-Bench 可以用于衡量智能编辑系统在“完成修改”和“保持原有内容”之间的平衡能力。
+
+**Links:**  
+[Dataset](https://huggingface.co/datasets/JarvisEvo/ArtEdit-Bench) /
+[Paper](https://arxiv.org/abs/2511.23002) /
+[Project](https://jarvisevo.vercel.app/) /
+[Code](https://github.com/LYL1015/JarvisEvo)
+
+---
+
+## CleanBench
+
+**Related Project:** JarvisIR  
+**Paper:** JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration  
+**Venue:** CVPR 2025  
+**Task:** Intelligent image restoration for autonomous-driving perception  
+**Type:** Synthetic + real-world adverse-weather restoration dataset  
+**Scale:** 150K synthetic + 80K real instruction-response pairs  
+**Weather / Degradation Coverage:** Night, rain, fog, snow, and combinations of multiple degradations
+
+**English introduction:**  
+CleanBench is a large-scale benchmark and training resource developed for JarvisIR, targeting intelligent image restoration under adverse visual conditions in autonomous-driving scenarios. It contains both synthetic and real-world components, enabling the restoration agent to learn from controlled degradations while also adapting to complex real-world environments.
+
+The dataset includes approximately 150K synthetically degraded samples with corresponding annotations and 80K real-world images collected under challenging weather and illumination conditions. The covered scenarios include night, rain, fog, snow, and combinations of multiple degradation types.
+
+CleanBench is designed not only for conventional low-level image restoration, but also for training and evaluating a VLM-powered restoration agent that must first understand the degradation condition and then coordinate appropriate expert restoration models. The public CleanBench release on Hugging Face currently contains more than 160K rows and approximately 27 GB of data. citeturn256576search0turn256576search5
+
+**中文简介：**  
+CleanBench 是 JarvisIR 构建的大规模**自动驾驶恶劣环境图像恢复数据集与评测基准**，用于训练和评估能够自主判断图像退化类型并协调多个专家恢复模型的智能图像恢复 Agent。
+
+CleanBench 同时包含合成数据和真实数据。其中，CleanBench-Synthetic 包含约 **15 万组人工合成退化样本**，CleanBench-Real 包含约 **8 万张真实恶劣环境图像**，覆盖夜间、雨天、雾天、雪天以及多种退化组合场景。JarvisIR 利用这些数据学习如何分析当前图像的退化情况，并据此选择合适的恢复工具。citeturn256576search2turn256576search5
+
+官方随后还公开了 **CleanBench-Real-80K** 以及论文使用的 **CleanBench-Test / Paper Test**，用于模型训练、评价和论文结果复现。Hugging Face 当前公开仓库约包含 **160,640 条数据、27.3 GB**。citeturn256576search0turn256576search1
+
+**Public Releases:**
+
+- **CleanBench-Synthetic** — approximately 150K synthetic instruction-response samples
+- **CleanBench-Real** — approximately 80K real-world adverse-condition samples
+- **CleanBench-Real-80K** — public real-world training and evaluation release
+- **CleanBench-Test / Paper Test** — test set released for reproducing the paper evaluation
+
+**Links:**  
+[Dataset](https://huggingface.co/datasets/LYL1015/CleanBench) /
+[Project](https://cvpr2025-jarvisir.github.io/) /
+[Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) /
+[Code](https://github.com/LYL1015/JarvisIR)
+
+---
+# 2.Publications from SmartDSP Lab
 # JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents
 
 <table>
