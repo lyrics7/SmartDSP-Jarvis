@@ -38,7 +38,7 @@ creative AI assistants, intelligent photo retouching, and image restoration.
 <tr>
 <td width="31%" align="center">
 
-<img src="jarvishub.jpg" width="100%" alt="JarvisHub">
+<img src="jarvishub.png" width="100%" alt="JarvisHub">
 
 </td>
 
@@ -94,7 +94,7 @@ JarvisHub 将**可编辑 Canvas** 作为整个系统的核心。Canvas 不仅承
 <tr>
 <td width="31%" align="center">
 
-<img src="jarvisevo.jpg" width="100%" alt="JarvisEvo">
+<img src="jarvisevo.png" width="100%" alt="JarvisEvo">
 
 </td>
 
@@ -154,7 +154,7 @@ JarvisEvo 是一个具有**自我演化能力的智能图像编辑 Agent**，其
 <tr>
 <td width="31%" align="center">
 
-<img src="jarvisx-cowork.jpg" width="100%" alt="JarvisX-Cowork">
+<img src="jarvisx-cowork.png" width="100%" alt="JarvisX-Cowork">
 
 </td>
 
