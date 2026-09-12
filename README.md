@@ -266,7 +266,7 @@ This section summarizes the featured Jarvis research projects and publications f
 | Year | Project | Research / Method Type | Authors | Venue / Status | Links |
 |---|---|---|---|---|---|
 | 2026 | **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** | Canvas-native multimodal creative-agent framework | Yunlong Lin et al. | Preprint / arXiv 2026 | [Project](https://www.jarvishub.site/) / [Paper](https://arxiv.org/abs/2607.23588) / [Code](https://github.com/LYL1015/JarvisHub) / [HF](https://huggingface.co/papers/2607.23588) |
-| 2025 | **JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization** | Self-evolving multimodal photo-editing agent | Yunlong Lin et al. | CVPR 2026 | [Project](https://jarvisevo.vercel.app/) / [Paper](https://arxiv.org/abs/2511.23002) / [Code](https://github.com/LYL1015/JarvisEvo) / [HF](https://huggingface.co/papers/2511.23002) |
+| 2026 | **JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization** | Self-evolving multimodal photo-editing agent | Yunlong Lin et al. | CVPR 2026 | [Project](https://jarvisevo.vercel.app/) / [Paper](https://arxiv.org/abs/2511.23002) / [Code](https://github.com/LYL1015/JarvisEvo) / [HF](https://huggingface.co/papers/2511.23002) |
 | — | **JarvisX-Cowork: A Personal AI Creative Assistant for End-to-End Creative Workflows** | Personal multimodal creative assistant | — | Demo / Open-source Project | [Code](https://github.com/LYL1015/JarvisX-Cowork) / [Demo](https://youtu.be/SiNsTmGbWlo) |
 | 2025 | **JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent** | MLLM-driven professional photo-retouching agent | Yunlong Lin et al. | NeurIPS 2025 | [Project](https://jarvisart.vercel.app/) / [Paper](https://arxiv.org/abs/2506.17612) / [Code](https://github.com/LYL1015/JarvisArt) / [HF](https://huggingface.co/papers/2506.17612) |
 | 2025 | **JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration** | Intelligent image-restoration agent | Yunlong Lin et al. | CVPR 2025 | [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) / [Code](https://github.com/LYL1015/JarvisIR) / [Demo](https://huggingface.co/spaces/LYL1015/JarvisIR) |
@@ -359,11 +359,10 @@ JarvisHub 将**可编辑 Canvas** 作为整个系统的核心。Canvas 不仅承
 
 <td width="69%">
 
-**Year:** 2025  
-**Venue / Status:** arXiv · Computer Vision and Pattern Recognition (cs.CV)  
-**First Submitted:** November 28, 2025  
-**Method Type:** Self-evolving multimodal photo-editing agent  
-**Task:** Iterative intelligent photo editing and autonomous self-improvement  
+**Year:** 2026  
+**Venue:** IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR 2026**)  
+**Preprint:** arXiv:2511.23002  
+**First Submitted:** November 28, 2025
 
 **Authors:**  
 Yunlong Lin, Linqing Wang, Kunjie Lin, Zixu Lin, Kaixiong Gong, Wenbo Li, Bin Lin, Zhenxi Li, Shiyi Zhang, Yuyang Peng, Wenxun Dai, Xinghao Ding, Chunyu Wang, Qinglin Lu
@@ -498,10 +497,9 @@ JarvisX-Cowork 尝试将 Agent 能力融入这一完整流程，使 AI 不再只
 <td width="69%">
 
 **Year:** 2025  
-**Venue / Status:** arXiv · Computer Vision and Pattern Recognition (cs.CV)  
-**Submitted:** June 21, 2025  
-**Method Type:** MLLM-driven intelligent photo-retouching agent  
-**Task:** Professional AI-assisted photo retouching  
+**Venue:** Conference on Neural Information Processing Systems (**NeurIPS 2025**)  
+**Preprint:** arXiv:2506.17612  
+**First Submitted:** June 21, 2025
 
 **Authors:**  
 Yunlong Lin, Zixu Lin, Kunjie Lin, Jinbin Bai, Panwang Pan, Chenxin Li, Haoyu Chen, Zhongdao Wang, Xinghao Ding, Wenbo Li, Shuicheng Yan
