@@ -270,13 +270,7 @@ JarvisArt 采用 **MLLM 驱动的 Agent 架构**。智能体能够理解用户�
 <tr>
 <td width="31%" align="center">
 
-<a href="assets/jarvisir.mp4">
-  <img src="assets/jarvisir-cover.jpg" width="100%" alt="JarvisIR Demo Video">
-</a>
-
-<br><br>
-
-▶️ **[Watch Demo Video](assets/jarvisir.mp4)**
+<img src="assets/jarvisir.gif" width="100%" alt="Jarvisir">
 
 </td>
 
