@@ -254,25 +254,6 @@ CleanBench 同时包含合成数据与真实数据。其中，Synthetic 部分�
 
 <a id="dataset-availability-for-other-jarvis-projects"></a>
 
-## Dataset Availability for Other Jarvis Projects
-
-### JarvisHub
-
-At present, JarvisHub does not provide a dedicated public training or evaluation dataset comparable to MMArt, ArtEdit-Bench, or CleanBench.
-
-The project currently focuses primarily on **long-horizon multimodal creative workflows, persistent canvas state, tool orchestration, agent runtime design, and qualitative demonstrations**.
-
-**中文说明：**  
-目前 JarvisHub 尚未公开类似 MMArt-Bench 或 CleanBench 的独立训练 / 测试数据集。该项目当前更关注长周期多模态创作流程、Canvas 状态表示、Agent 工具编排以及复杂创作过程中的持续状态维护。
-
-### JarvisX-Cowork
-
-JarvisX-Cowork is currently released primarily as an **open-source creative assistant and demonstration system**, and no dedicated public benchmark or training dataset is currently listed.
-
-**中文说明：**  
-JarvisX-Cowork 当前主要以开源 Creative Assistant 和 Demo 系统的形式发布，其重点是端到端创作流程和 Personal AI Coworker 的实际交互体验，目前未单独公开专门的训练数据集或评测 Benchmark。
-
----
 
 # 2. Publications from SmartDSP Lab
 
