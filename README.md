@@ -1,5 +1,74 @@
 <div align="center">
 
+<div align="center">
+
+# SmartDSP · Jarvis Research Collection
+
+### Multimodal Agents · Creative AI · Intelligent Image Editing · Image Restoration
+
+A curated collection of **datasets, publications, and research projects** from **SmartDSP Lab**, 
+covering multimodal creative agents, intelligent photo editing, human-AI collaboration, 
+and image restoration for visual perception.
+
+</div>
+
+---
+
+## Overview
+
+The **SmartDSP Jarvis Research Collection** brings together a series of research efforts exploring 
+the evolution of intelligent visual systems from specialized image processing models toward 
+general-purpose multimodal agents.
+
+The collection currently covers three major components:
+
+- **📦 Datasets & Benchmarks** — Public datasets and evaluation benchmarks developed for intelligent photo retouching, image editing, and image restoration, including **MMArt-PPR10K**, **MMArt-Bench**, **ArtEdit-Bench**, and **CleanBench**.
+- **📚 Publications** — Research publications and technical works from SmartDSP Lab covering multimodal agents, creative AI, intelligent image editing, and visual restoration.
+- **🚀 Jarvis Projects** — A series of intelligent visual and creative agents, including **JarvisIR**, **JarvisArt**, **JarvisEvo**, **JarvisX-Cowork**, and **JarvisHub**.
+
+Together, these projects reflect our exploration from **intelligent visual restoration and professional image editing** 
+toward **self-evolving, collaborative, and canvas-native multimodal creative agents**.
+
+---
+
+## Table of Contents
+
+- [📦 Datasets & Benchmarks](#datasets--benchmarks)
+  - [Summary](#dataset-summary)
+  - [MMArt-PPR10K](#mmart-ppr10k)
+  - [MMArt-Bench](#mmart-bench)
+  - [ArtEdit-Bench](#artedit-bench)
+  - [CleanBench](#cleanbench)
+- [📚 Publications from SmartDSP Lab](#publications-from-smartdsp-lab)
+- [🚀 Jarvis Projects](#jarvis-projects)
+  - [JarvisHub](#jarvishub)
+  - [JarvisEvo](#jarvisevo)
+  - [JarvisX-Cowork](#jarvisx-cowork)
+  - [JarvisArt](#jarvisart)
+  - [JarvisIR](#jarvisir)
+
+---
+
+# Datasets & Benchmarks
+
+This section summarizes the public datasets and evaluation benchmarks associated with the 
+Jarvis series, covering instruction-driven photo retouching, intelligent image editing, 
+and adverse-condition image restoration.
+
+<a id="dataset-summary"></a>
+
+## Summary
+
+| Dataset | Related Project | Type | Scale / Content | Main Purpose | Links |
+|---|---|---|---|---|---|
+| **MMArt-PPR10K** | JarvisArt | Multimodal paired retouching dataset | PPR10K-based multimodal retouching data with images, instructions, and editing configurations | Training instruction-driven photo retouching agents | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k) / [Paper](https://arxiv.org/abs/2506.17612) |
+| **MMArt-Bench** | JarvisArt | Real-world retouching benchmark | 200 benchmark instances across 4 scenarios + portrait region-level evaluation subset | Evaluating instruction following, retouching quality, and content fidelity | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-Bench) / [Paper](https://arxiv.org/abs/2506.17612) |
+| **ArtEdit-Bench** | JarvisEvo | Image editing benchmark | Preservative and instruction-following image editing benchmark | Evaluating self-evolving image editing agents | [Dataset](https://huggingface.co/datasets/JarvisEvo/ArtEdit-Bench) / [Paper](https://arxiv.org/abs/2511.23002) |
+| **CleanBench** | JarvisIR | Synthetic + real image restoration dataset | 150K synthetic + 80K real instruction-response pairs | Training and evaluating intelligent restoration agents for autonomous-driving perception | [Dataset](https://huggingface.co/datasets/LYL1015/CleanBench) / [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) |
+
+---
+
+
 # SmartDSP · Jarvis Project Gallery
 
 ### Multimodal Agents · Creative AI · Intelligent Image Editing · Image Restoration
@@ -18,19 +87,6 @@ creative AI assistants, intelligent photo retouching, and image restoration.
 
 </div>
 
----
-
-# Summary
-
-| Year | Project | Method Type | Authors | Venue / Status | Links |
-|---|---|---|---|---|---|
-| 2026 | **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** | Canvas-native multimodal creative agent framework | Yunlong Lin et al. | arXiv 2026 | [Project](https://www.jarvishub.site/) / [Paper](https://arxiv.org/abs/2607.23588) / [Code](https://github.com/LYL1015/JarvisHub) / [HF](https://huggingface.co/papers/2607.23588) |
-| 2025 | **JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization** | Self-evolving multimodal editing agent | Yunlong Lin et al. | arXiv 2025 | [Project](https://jarvisevo.vercel.app/) / [Paper](https://arxiv.org/abs/2511.23002) / [Code](https://github.com/LYL1015/JarvisEvo) / [HF](https://huggingface.co/papers/2511.23002) |
-| — | **JarvisX-Cowork: A Personal AI Creative Assistant for End-to-End Creative Workflows** | Personal multimodal creative assistant | — | Demo / Project | [Code](https://github.com/LYL1015/JarvisX-Cowork) / [Demo](https://youtu.be/SiNsTmGbWlo) |
-| 2025 | **JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent** | MLLM-driven intelligent photo retouching agent | Yunlong Lin et al. | arXiv 2025 | [Project](https://jarvisart.vercel.app/) / [Paper](https://arxiv.org/abs/2506.17612) / [Code](https://github.com/LYL1015/JarvisArt) / [HF](https://huggingface.co/papers/2506.17612) |
-| 2025 | **JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration** | Intelligent image restoration agent | Yunlong Lin et al. | CVPR 2025 | [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) / [Code](https://github.com/LYL1015/JarvisIR) / [Demo](https://huggingface.co/spaces/LYL1015/JarvisIR) |
-
----
 # 1. Datasets
 
 This section summarizes the public datasets and benchmarks associated with the Jarvis series, including
@@ -186,6 +242,21 @@ CleanBench 同时包含合成数据和真实数据。其中，CleanBench-Synthet
 
 ---
 # 2.Publications from SmartDSP Lab
+
+---
+
+# Summary
+
+| Year | Project | Method Type | Authors | Venue / Status | Links |
+|---|---|---|---|---|---|
+| 2026 | **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** | Canvas-native multimodal creative agent framework | Yunlong Lin et al. | arXiv 2026 | [Project](https://www.jarvishub.site/) / [Paper](https://arxiv.org/abs/2607.23588) / [Code](https://github.com/LYL1015/JarvisHub) / [HF](https://huggingface.co/papers/2607.23588) |
+| 2025 | **JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization** | Self-evolving multimodal editing agent | Yunlong Lin et al. | arXiv 2025 | [Project](https://jarvisevo.vercel.app/) / [Paper](https://arxiv.org/abs/2511.23002) / [Code](https://github.com/LYL1015/JarvisEvo) / [HF](https://huggingface.co/papers/2511.23002) |
+| — | **JarvisX-Cowork: A Personal AI Creative Assistant for End-to-End Creative Workflows** | Personal multimodal creative assistant | — | Demo / Project | [Code](https://github.com/LYL1015/JarvisX-Cowork) / [Demo](https://youtu.be/SiNsTmGbWlo) |
+| 2025 | **JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent** | MLLM-driven intelligent photo retouching agent | Yunlong Lin et al. | arXiv 2025 | [Project](https://jarvisart.vercel.app/) / [Paper](https://arxiv.org/abs/2506.17612) / [Code](https://github.com/LYL1015/JarvisArt) / [HF](https://huggingface.co/papers/2506.17612) |
+| 2025 | **JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration** | Intelligent image restoration agent | Yunlong Lin et al. | CVPR 2025 | [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) / [Code](https://github.com/LYL1015/JarvisIR) / [Demo](https://huggingface.co/spaces/LYL1015/JarvisIR) |
+
+---
+
 # JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents
 
 <table>
