@@ -38,7 +38,7 @@ creative AI assistants, intelligent photo retouching, and image restoration.
 <tr>
 <td width="31%" align="center">
 
-<img src="assets/jarvishub.jpg" width="100%" alt="JarvisHub">
+<img src="jarvishub.jpg" width="100%" alt="JarvisHub">
 
 </td>
 
@@ -94,7 +94,7 @@ JarvisHub 将**可编辑 Canvas** 作为整个系统的核心。Canvas 不仅承
 <tr>
 <td width="31%" align="center">
 
-<img src="assets/jarvisevo.jpg" width="100%" alt="JarvisEvo">
+<img src="jarvisevo.jpg" width="100%" alt="JarvisEvo">
 
 </td>
 
@@ -154,7 +154,7 @@ JarvisEvo 是一个具有**自我演化能力的智能图像编辑 Agent**，其
 <tr>
 <td width="31%" align="center">
 
-<img src="assets/jarvisx-cowork.jpg" width="100%" alt="JarvisX-Cowork">
+<img src="jarvisx-cowork.jpg" width="100%" alt="JarvisX-Cowork">
 
 </td>
 
@@ -206,7 +206,7 @@ JarvisX-Cowork 尝试将 Agent 能力融入这一完整工作流，使 AI 不再
 <tr>
 <td width="31%" align="center">
 
-<img src="assets/jarvisart.gif" width="100%" alt="JarvisArt Demo">
+<img src="jarvisart.gif" width="100%" alt="JarvisArt Demo">
 
 </td>
 
@@ -270,7 +270,7 @@ JarvisArt 采用 **MLLM 驱动的 Agent 架构**。智能体能够理解用户�
 <tr>
 <td width="31%" align="center">
 
-<img src="assets/jarvisir.gif" width="100%" alt="Jarvisir">
+<img src="jarvisir.gif" width="100%" alt="Jarvisir">
 
 </td>
 
