@@ -328,19 +328,3 @@ JarvisIR 是一个面向自动驾驶视觉感知场景的**智能图像恢复 Ag
 
 ---
 
-# Project Media
-
-Recommended repository structure:
-
-```text
-SmartDSP-Jarvis/
-│
-├── README.md
-│
-└── assets/
-    ├── jarvishub.jpg
-    ├── jarvisevo.jpg
-    ├── jarvisx-cowork.jpg
-    ├── jarvisart.gif
-    ├── jarvisir.mp4
-    └── jarvisir-cover.jpg
