@@ -69,7 +69,7 @@ This section summarizes the public datasets and evaluation benchmarks associated
 |---|---|---|---|---|---|
 | **MMArt-PPR10K** | JarvisArt | Multimodal paired image-retouching dataset | PPR10K-based paired images, multi-granularity user instructions, and Lua/XMP-based Lightroom editing configurations | Research on instruction-driven agentic image retouching | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k) / [Paper](https://arxiv.org/abs/2506.17612) |
 | **MMArt-Bench** | JarvisArt | Multiscenario photo-retouching evaluation benchmark | 200 instances across 4 major scenarios + 50-image portrait subset with mask annotations | Comprehensive image-level and region-level evaluation of agentic photo-retouching systems | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-Bench) / [Paper](https://arxiv.org/abs/2506.17612) |
-| **ArtEdit-Bench** | JarvisEvo | Image-editing benchmark | Preservative and instruction-following image-editing evaluation | Evaluating self-evolving image-editing agents | [Dataset](https://huggingface.co/datasets/JarvisEvo/ArtEdit-Bench) / [Paper](https://arxiv.org/abs/2511.23002) |
+| **ArtEdit-Bench** | JarvisEvo | Image-editing evaluation benchmark | ArtEdit-Bench-Lr: 800 bilingual samples; ArtEdit-Bench-Eval: 200 English samples | Evaluating fine-grained retouching and model self-evaluation capabilities | [Dataset](https://huggingface.co/datasets/JarvisEvo/ArtEdit-Bench) / [Paper](https://arxiv.org/abs/2511.23002) |
 | **CleanBench** | JarvisIR | Synthetic + real-world restoration dataset | 150K synthetic + 80K real instruction-response pairs | Training and evaluating intelligent restoration agents for autonomous-driving perception | [Dataset](https://huggingface.co/datasets/LYL1015/CleanBench) / [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) |
 
 ---
@@ -170,29 +170,31 @@ MMArt-Bench 可以视为 MMArt 数据体系中的评测组成部分，与 MMArt-
 
 **Related Project:** JarvisEvo  
 **Paper:** *JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization*  
-**Task:** Intelligent image-editing evaluation  
-**Type:** Image-editing benchmark  
-**Evaluation Focus:** Instruction following · Preservative editing · Content fidelity  
+**Task:** Photo-retouching and self-evaluation assessment  
+**Type:** Image-editing evaluation benchmark  
+**Scale:** 1,000 benchmark samples across two subsets  
+**Subsets:** ArtEdit-Bench-Lr · ArtEdit-Bench-Eval  
+**Evaluation Focus:** Global and local fine-grained retouching · Model self-evaluation
 
 ### English Introduction
 
-**ArtEdit-Bench** is an image-editing benchmark used to evaluate JarvisEvo and other intelligent image-editing systems.
+**ArtEdit-Bench** is an image-editing evaluation benchmark introduced with JarvisEvo for assessing both photo-retouching and model self-evaluation capabilities. It consists of two complementary subsets: **ArtEdit-Bench-Lr** and **ArtEdit-Bench-Eval**.
 
-The benchmark focuses not only on whether an agent successfully performs the requested modification, but also on whether unrelated visual content remains unchanged. This capability is especially important for professional and agent-based editing systems, where uncontrolled changes to identity, structure, texture, background, or non-target regions can significantly reduce editing reliability.
+**ArtEdit-Bench-Lr** contains **800 samples**, including 400 English and 400 Chinese samples selected from the ArtEdit-Lr dataset. It is designed to evaluate both **global and local fine-grained retouching capabilities**, providing a benchmark for assessing how effectively image-editing systems perform detailed photo-retouching tasks across different editing granularities.
 
-ArtEdit-Bench therefore emphasizes **preservative editing** and **content fidelity**, providing a useful evaluation setting for studying the balance between instruction following, visual editing quality, and preservation of original image information.
+**ArtEdit-Bench-Eval** contains **200 English samples** sampled from the ArtEdit-Eval dataset. This subset is designed to assess a model's **self-evaluation capabilities** and enables comparison with dedicated assessment models.
 
-For self-evolving agents such as JarvisEvo, this benchmark is particularly valuable because it enables systematic evaluation of whether iterative reasoning, self-evaluation, and refinement actually lead to better and more faithful editing results.
+Together, the two subsets allow ArtEdit-Bench to evaluate not only the editing performance of intelligent photo-editing systems but also their ability to assess editing results. This makes the benchmark particularly relevant to JarvisEvo's unified editor-evaluator framework, in which editing and evaluation capabilities are jointly developed.
 
 ### 中文简介
 
-**ArtEdit-Bench** 是 JarvisEvo 使用的**智能图像编辑评测基准**，主要用于评估编辑 Agent 在执行用户编辑指令时的准确性和内容保持能力。
+**ArtEdit-Bench** 是 JarvisEvo 项目提出的**图像编辑评测基准**，主要用于评估智能照片编辑系统的修图能力以及模型自身的评价能力。该 Benchmark 由两个相互补充的子集组成：**ArtEdit-Bench-Lr** 和 **ArtEdit-Bench-Eval**。
 
-对于智能图像编辑而言，仅仅“完成目标修改”是不够的。如果 Agent 在修改指定对象或区域时，同时改变了人物身份、背景、纹理、结构或其他无关内容，那么这种编辑仍然缺乏足够的可靠性和可控性。
+**ArtEdit-Bench-Lr** 包含 **800 个样本**，其中包括 400 个英文样本和 400 个中文样本，这些数据从 ArtEdit-Lr 数据集中选取得到。该子集主要用于评估模型的**全局和局部细粒度照片修饰能力（Global and Local Fine-Grained Retouching）**，从而衡量图像编辑系统在不同编辑粒度下完成专业修图任务的能力。
 
-因此，ArtEdit-Bench 特别强调 **Preservative Editing（保持式编辑）** 与 **Content Fidelity（内容保真度）**，用于衡量一个编辑系统是否能够在完成目标修改的同时，最大程度保留原始图像中不应发生变化的内容。
+**ArtEdit-Bench-Eval** 包含从 ArtEdit-Eval 数据集中采样得到的 **200 个英文样本**，主要用于评估模型的**自我评价能力（Self-Evaluation Capability）**，并与其他专门的评估模型进行公平比较。
 
-对于 JarvisEvo 这类具有自我评价和自我优化能力的 Editing Agent，ArtEdit-Bench 也能够用于检验其迭代推理、评价和改进机制是否真正提升了最终编辑质量。
+因此，ArtEdit-Bench 不仅关注智能图像编辑系统“如何完成编辑任务”，还进一步关注模型“如何评价编辑结果”。这种双重评测设计与 JarvisEvo 的统一 Editor-Evaluator 框架相对应，使其能够同时衡量模型的照片编辑能力和自我评价能力。
 
 ### Links
 
