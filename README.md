@@ -70,7 +70,7 @@ This section summarizes the public datasets and evaluation benchmarks associated
 | **MMArt-PPR10K** | JarvisArt | Multimodal paired image-retouching dataset | PPR10K-based paired images, multi-granularity user instructions, and Lua/XMP-based Lightroom editing configurations | Research on instruction-driven agentic image retouching | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-PPR10k) / [Paper](https://arxiv.org/abs/2506.17612) |
 | **MMArt-Bench** | JarvisArt | Multiscenario photo-retouching evaluation benchmark | 200 instances across 4 major scenarios + 50-image portrait subset with mask annotations | Comprehensive image-level and region-level evaluation of agentic photo-retouching systems | [Dataset](https://huggingface.co/datasets/JarvisArt/MMArt-Bench) / [Paper](https://arxiv.org/abs/2506.17612) |
 | **ArtEdit-Bench** | JarvisEvo | Image-editing evaluation benchmark | ArtEdit-Bench-Lr: 800 bilingual samples; ArtEdit-Bench-Eval: 200 English samples | Evaluating fine-grained retouching and model self-evaluation capabilities | [Dataset](https://huggingface.co/datasets/JarvisEvo/ArtEdit-Bench) / [Paper](https://arxiv.org/abs/2511.23002) |
-| **CleanBench** | JarvisIR | Synthetic + real-world restoration dataset | 150K synthetic + 80K real instruction-response pairs | Training and evaluating intelligent restoration agents for autonomous-driving perception | [Dataset](https://huggingface.co/datasets/LYL1015/CleanBench) / [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) |
+| **CleanBench** | JarvisIR | Synthetic + real-world instruction-following image-restoration dataset | 150K synthetic + 80K real instruction-response pairs | Training and evaluating intelligent restoration systems under real-world adverse conditions | [Dataset](https://huggingface.co/datasets/LYL1015/CleanBench) / [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) |
 
 ---
 
@@ -212,41 +212,42 @@ Together, the two subsets allow ArtEdit-Bench to evaluate not only the editing p
 **Related Project:** JarvisIR  
 **Paper:** *JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration*  
 **Venue:** CVPR 2025  
-**Task:** Intelligent image restoration for autonomous-driving perception  
-**Type:** Synthetic + real-world adverse-condition restoration dataset  
+**Task:** Intelligent image restoration for robust autonomous-driving perception  
+**Type:** Synthetic + real-world instruction-following image-restoration dataset  
 **Scale:** 150K synthetic + 80K real instruction-response pairs  
-**Coverage:** Night · Rain · Fog · Snow · Mixed degradation conditions  
+**Coverage:** Diverse adverse-weather and coupled image degradations  
+**Purpose:** Training and evaluation of intelligent image-restoration systems
 
 ### English Introduction
 
-**CleanBench** is a large-scale training and evaluation resource developed for JarvisIR, targeting intelligent image restoration under adverse visual conditions in autonomous-driving scenarios.
+**CleanBench** is a large-scale instruction-following image-restoration dataset introduced with JarvisIR to support the training and evaluation of intelligent restoration systems under challenging real-world conditions.
 
-The benchmark contains both synthetic and real-world components. The synthetic portion provides approximately **150K degraded training samples**, while the real-world component contains approximately **80K images** collected under challenging environmental and illumination conditions.
+The complete CleanBench dataset consists of approximately **150K synthetic and 80K real instruction-response pairs**. The synthetic component provides controlled degraded data for supervised learning, while the real-world component is designed to improve robustness and generalization under complex adverse-weather conditions.
 
-The covered degradation scenarios include night scenes, rain, fog, snow, and combinations of multiple degradation types. This allows an intelligent restoration agent to learn both controlled degradation patterns and complex real-world visual conditions.
+Rather than focusing only on a single predefined restoration task, CleanBench supports intelligent restoration systems that must understand image degradation conditions and determine appropriate restoration strategies. Its construction incorporates degraded images together with assessment reasoning, restoration task sequences, and corresponding instruction-response data.
 
-CleanBench is designed not only for conventional low-level image restoration, but also for training and evaluating an intelligent restoration system that must first understand the current degradation condition and then coordinate appropriate restoration capabilities.
+CleanBench plays an important role in JarvisIR's two-stage training framework. Synthetic CleanBench data is used for supervised fine-tuning to develop instruction-following and degradation-recognition capabilities, while CleanBench-Real supports human-feedback alignment for improving robustness, reducing hallucinations, and enhancing generalization to real-world adverse weather.
 
-This makes CleanBench a bridge between **low-level visual restoration** and **high-level autonomous-driving perception**.
+By supporting both intelligent restoration decision-making and downstream perception-oriented evaluation, CleanBench helps connect **low-level image restoration** with **robust high-level perception in autonomous-driving environments**.
 
 ### 中文简介
 
-**CleanBench** 是 JarvisIR 构建的大规模**自动驾驶恶劣环境图像恢复数据集与评测基准**，用于训练和评价能够自主分析退化情况并协调不同恢复能力的智能图像恢复 Agent。
+**CleanBench** 是 JarvisIR 项目提出的大规模**指令跟随图像恢复数据集（Instruction-Following Image-Restoration Dataset）**，主要用于支持智能图像恢复系统在复杂真实环境下的训练与评估。
 
-CleanBench 同时包含合成数据与真实数据。其中，Synthetic 部分包含约 **15 万组人工构造的退化训练样本**，Real 部分包含约 **8 万张真实复杂环境图像**。
+完整的 CleanBench 包含约 **15 万组合成数据和 8 万组真实数据对应的 Instruction-Response Pairs**。其中，合成数据主要提供可控的图像退化样本，用于监督学习；真实数据则面向更加复杂的真实恶劣天气环境，以提升系统的鲁棒性和泛化能力。
 
-其覆盖场景包括夜间、雨天、雾天、雪天以及多种退化情况组合，使模型既能够学习相对可控的图像退化规律，也能够面对更加复杂的真实世界视觉条件。
+与仅针对某一种预定义退化类型执行固定恢复操作的数据集不同，CleanBench 面向更加智能化的 Restoration System：模型不仅需要处理退化图像，还需要理解当前图像的退化情况，并据此确定合适的恢复策略。其数据构建过程结合了退化图像、退化评估推理、最优恢复任务序列以及相应的 Instruction-Response 数据。
 
-与仅面向单一低层图像恢复任务的数据集不同，CleanBench 还服务于智能 Restoration Agent 的训练与评测：系统不仅需要执行恢复操作，还需要首先判断当前视觉问题，并进一步协调合适的恢复能力。
+CleanBench 同时服务于 JarvisIR 的两阶段训练框架。Synthetic 数据用于监督微调，使模型学习指令跟随和图像退化识别能力；CleanBench-Real 则用于 Human Feedback Alignment，以进一步提升系统在真实恶劣天气条件下的鲁棒性、降低幻觉并增强泛化能力。
 
-因此，CleanBench 建立了**低层图像恢复与高层自动驾驶视觉感知之间的重要联系**。
+因此，CleanBench 不仅服务于低层图像恢复任务，还进一步支持面向自动驾驶视觉系统的感知性能研究，在**低层图像恢复（Low-Level Image Restoration）**与**高层自动驾驶视觉感知（High-Level Perception）**之间建立联系。
 
 ### Public Releases
 
-- **CleanBench-Synthetic** — approximately 150K synthetic degraded instruction-response samples
-- **CleanBench-Real** — approximately 80K real-world adverse-condition samples
-- **CleanBench-Real-80K** — public real-world release
-- **CleanBench-Test / Paper Test** — evaluation data used for reproducing paper experiments
+- **CleanBench-Synthetic** — approximately 150K synthetic instruction-response pairs in the complete CleanBench definition
+- **CleanBench-Real** — approximately 80K real-world instruction-response pairs in the complete CleanBench definition
+- **CleanBench-Real-80K** — publicly released real-world data for training and evaluation
+- **CleanBench-Test (Paper Test)** — test data released for reproducing the experiments reported in the paper
 
 ### Links
 
