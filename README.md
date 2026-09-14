@@ -4,13 +4,11 @@
 
 ### Multimodal Agents · Creative AI · Intelligent Image Editing · Image Restoration
 
-A curated collection of **datasets, benchmarks, publications, and research projects** from **SmartDSP Lab**,  
-covering multimodal creative agents, intelligent photo editing, human-AI collaboration,  
-and image restoration for visual perception.
+A curated collection of **datasets, benchmarks, research publications, and open-source projects** from **SmartDSP Lab**, covering intelligent image restoration, professional photo retouching, self-evolving image-editing agents, human-AI creative collaboration, and long-horizon multimodal creative systems.
 
 <br>
 
-**Datasets · Benchmarks · Publications · Open-source Projects · Interactive Demos**
+**Datasets · Benchmarks · Publications · Open-Source Projects · Interactive Demos**
 
 </div>
 
@@ -18,23 +16,29 @@ and image restoration for visual perception.
 
 ## Overview
 
-The **SmartDSP Jarvis Research Collection** brings together a series of research efforts exploring the evolution of intelligent visual systems from specialized image processing methods toward increasingly general, autonomous, and collaborative multimodal agents.
+The **SmartDSP Jarvis Research Collection** brings together a series of research efforts exploring the evolution of intelligent visual systems — from specialized image restoration and professional photo editing toward increasingly autonomous, adaptive, and collaborative multimodal agents.
 
-The collection currently consists of three major components:
+The collection is organized into three major components:
 
-- ** Datasets & Benchmarks** — Public datasets and evaluation benchmarks for professional photo retouching, intelligent image editing, and adverse-condition image restoration, including **MMArt-PPR10K**, **MMArt-Bench**, **ArtEdit-Bench**, and **CleanBench**.
-- ** Publications from SmartDSP Lab** — Research works spanning intelligent image restoration, multimodal photo-retouching agents, self-evolving editing agents, personal creative assistants, and canvas-native multimodal agents.
-- ** Jarvis Research Projects** — A family of intelligent visual and creative systems, including **JarvisIR**, **JarvisArt**, **JarvisEvo**, **JarvisX-Cowork**, and **JarvisHub**.
+- **Datasets & Benchmarks** — Public resources supporting the training, development, and evaluation of intelligent visual agents, including **CleanBench** for instruction-following image restoration, **MMArt-PPR10K** for agentic professional photo retouching, **MMArt-Bench** for multiscenario and region-level retouching evaluation, and **ArtEdit-Bench** for fine-grained editing and self-evaluation assessment.
 
-Together, these works reflect a continuous research trajectory:
+- **Research Publications** — Research on **VLM-powered intelligent image restoration**, **MLLM-driven professional photo retouching**, and **self-evolving image-editing agents**, represented by **JarvisIR**, **JarvisArt**, and **JarvisEvo**.
+
+- **Open-Source Agent Projects** — Creative-agent systems that extend beyond individual visual tasks toward longer and more general creative workflows, including **JarvisX-Cowork**, an end-to-end personal creative-agent harness, and **JarvisHub**, an open canvas-native multimodal creative-agent harness.
+
+Together, these works form a progressive research trajectory:
 
 <div align="center">
 
-**Intelligent Image Restoration → Professional Photo Retouching → Self-Evolving Editing → AI Creative Coworkers → Canvas-Native Multimodal Agents**
+**Intelligent Image Restoration → Professional Photo Retouching → Self-Evolving Image Editing → End-to-End Creative Coworking → Canvas-Native Multimodal Agents**
+
+**JarvisIR → JarvisArt → JarvisEvo → JarvisX-Cowork → JarvisHub**
 
 </div>
 
-The overall goal is to explore how AI systems can move beyond isolated generation or enhancement tasks and become **persistent, interpretable, tool-using, human-steerable collaborators** for visual understanding and creative production.
+This trajectory reflects a broader transition from **task-specific visual intelligence** toward **general-purpose creative agents**. Early systems focus on understanding visual degradation and coordinating specialized restoration models; subsequent work extends agentic reasoning to professional photo-retouching tools, introduces self-evaluation and self-improvement, and ultimately expands toward persistent creative assistants and canvas-native environments for long-horizon multimodal creation.
+
+Across these projects, the central goal is to explore how AI systems can move beyond isolated restoration, editing, or generation tasks and become **persistent, tool-using, adaptive, human-steerable collaborators** capable of reasoning over visual content, interacting with professional tools, maintaining project context, evaluating intermediate results, and supporting complex creative workflows.
 
 ---
 
@@ -273,9 +277,9 @@ This section summarizes the featured Jarvis research projects and publications f
 |---|---|---|---|---|---|
 | 2026 | **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** |Canvas-native multimodal creative-agent harness | Yunlong Lin et al. | Preprint / arXiv 2026 | [Project](https://www.jarvishub.site/) / [Paper](https://arxiv.org/abs/2607.23588) / [Code](https://github.com/LYL1015/JarvisHub) / [HF](https://huggingface.co/papers/2607.23588) |
 | 2026 | **JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization** | Self-evolving photo-editing agent | Yunlong Lin et al. | CVPR 2026 | [Project](https://jarvisevo.vercel.app/) / [Paper](https://arxiv.org/abs/2511.23002) / [Code](https://github.com/LYL1015/JarvisEvo) / [HF](https://huggingface.co/papers/2511.23002) |
-| — | **JarvisX-Cowork: A Personal AI Creative Assistant for End-to-End Creative Workflows** | Personal multimodal creative assistant | — | Demo / Open-source Project | [Code](https://github.com/LYL1015/JarvisX-Cowork) / [Demo](https://youtu.be/SiNsTmGbWlo) |
+| 2026 | **JarvisX-Cowork** | End-to-end creative-agent harness | — | Open-Source Project | [Code](https://github.com/LYL1015/JarvisX-Cowork) / [Demo](https://youtu.be/SiNsTmGbWlo) |
 | 2025 | **JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent** | MLLM-driven professional photo-retouching agent | Yunlong Lin et al. | NeurIPS 2025 | [Project](https://jarvisart.vercel.app/) / [Paper](https://arxiv.org/abs/2506.17612) / [Code](https://github.com/LYL1015/JarvisArt) / [HF](https://huggingface.co/papers/2506.17612) |
-| 2025 | **JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration** | Intelligent image-restoration agent | Yunlong Lin et al. | CVPR 2025 | [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) / [Code](https://github.com/LYL1015/JarvisIR) / [Demo](https://huggingface.co/spaces/LYL1015/JarvisIR) |
+| 2025 | **JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration** | VLM-powered intelligent image-restoration agent | Yunlong Lin et al. | CVPR 2025 | [Project](https://cvpr2025-jarvisir.github.io/) / [Paper](https://lyl1015.github.io/papers/CVPR2025_JarvisIR.pdf) / [Code](https://github.com/LYL1015/JarvisIR) / [Demo](https://huggingface.co/spaces/LYL1015/JarvisIR) |
 
 ---
 
@@ -438,7 +442,7 @@ Together, iMCoT and SEPO move intelligent photo editing beyond passive instructi
 
 ## JarvisX-Cowork
 
-### A Personal AI Creative Assistant for End-to-End Creative Workflows
+### A Personal AI Creative Assistant for Everyone
 
 <table>
 <tr>
@@ -450,13 +454,15 @@ Together, iMCoT and SEPO move intelligent photo editing beyond passive instructi
 
 <td width="69%">
 
-**Status:** Demo / Open-source Project  
-**Type:** Personal multimodal creative assistant  
-**Task:** End-to-end AI-assisted creative workflows  
-**Research Direction:** Human-AI creative collaboration  
+**Year:** 2026  
+**Status:** Open-Source Project  
+**Type:** End-to-end creative-agent harness  
+**Positioning:** Personal AI creative assistant  
+**Task:** Open-ended, end-to-end creative workflows  
+**Research Direction:** Long-horizon creative agents and human-AI collaboration  
 
 **Keywords:**  
-Creative Agent · AI Cowork · Multimodal Assistant · Human-AI Collaboration · End-to-End Workflow
+Creative Agent · AI Cowork · End-to-End Workflow · Persistent Planning · Shared Memory · Tool Orchestration · Human-AI Collaboration
 
 **Links:**  
 [Code](https://github.com/LYL1015/JarvisX-Cowork) /
@@ -464,11 +470,13 @@ Creative Agent · AI Cowork · Multimodal Assistant · Human-AI Collaboration ·
 
 ### Highlights
 
-- Provides a personal AI creative assistant for complete end-to-end workflows.
-- Goes beyond isolated prompt-response interactions.
-- Supports multiple stages of a creative project rather than only a single generation task.
-- Combines multimodal understanding, content generation, organization, and workflow assistance.
-- Explores AI as a persistent **creative coworker** rather than a single-purpose generation tool.
+- Introduces a **personal AI creative assistant** for open-ended, end-to-end creative workflows.
+- Turns a terminal-oriented AI agent into a **visual, collaborative, and creative desktop companion**.
+- Supports creative workflows spanning **reference search, content generation, professional refinement, video creation, and final deliverable production**.
+- Integrates creative capabilities including **WebSearch, image generation and editing, Lightroom-based refinement, and video generation**.
+- Uses **persistent planning, shared memory, and structured tool interfaces** to carry project state from initial intent to final deliverables.
+- Supports common agent capabilities such as file operations, command execution, web access, task planning, and human-in-the-loop permission control.
+- Functions as an **agent harness/application rather than a standalone generative model**, orchestrating existing models, tools, and creative skills within a unified workflow.
 
 </td>
 </tr>
@@ -476,25 +484,31 @@ Creative Agent · AI Cowork · Multimodal Assistant · Human-AI Collaboration ·
 
 ### English Introduction
 
-**JarvisX-Cowork** is a personal AI creative assistant designed to support **end-to-end creative workflows**.
+**JarvisX-Cowork** is an open-source **personal AI creative assistant** designed to support open-ended, end-to-end creative workflows. Rather than focusing on a single generation task, it explores how an AI agent can accompany users throughout a complete creative process, from initial inspiration to final deliverables.
 
-Conventional AI tools typically perform isolated tasks such as generating one image, answering one question, or producing one piece of text. Real creative work, however, usually involves a much longer sequence of interconnected stages.
+Conventional AI tools often handle isolated tasks such as generating an image, writing a piece of text, or answering a question. Real creative work, however, typically involves multiple interconnected stages, including discovering inspiration, collecting references, developing ideas, generating visual content, refining intermediate results, producing videos, and assembling final presentations or documents.
 
-A typical workflow may include discovering inspiration, collecting references, organizing materials, developing concepts, creating visual assets, revising intermediate results, and assembling a final deliverable.
+JarvisX-Cowork integrates these stages into a unified creative workflow. A representative process can begin with a blank canvas, use **WebSearch** to discover references, generate images, refine visual results through professional editing tools such as **Adobe Lightroom**, create videos, and finally produce demos, presentation decks, or documents.
 
-JarvisX-Cowork explores how an AI agent can participate throughout this complete process rather than appearing only at a single generation step.
+Beyond individual creative tools, JarvisX-Cowork uses **persistent planning, shared memory, and structured tool interfaces** to help the agent maintain coherent project state across longer workflows. It also retains general agent capabilities such as file operations, command execution, web access, task planning, and human-in-the-loop confirmation for important tool operations.
 
-The project therefore positions AI as a persistent **creative coworker**. By combining multimodal understanding, agentic interaction, content generation, and workflow support, JarvisX-Cowork explores how personal AI systems can collaborate with users throughout longer, more complex, and more realistic creative tasks.
+Importantly, JarvisX-Cowork is better understood as an **end-to-end creative-agent harness and application rather than a standalone generative model**. It orchestrates existing models, tools, and creative skills within a unified desktop environment.
+
+Overall, JarvisX-Cowork positions AI not merely as a single-purpose generation tool, but as a **personal creative coworker** capable of assisting users across multiple stages of a creative project, from inspiration and planning to generation, refinement, and final delivery.
 
 ### 中文简介
 
-**JarvisX-Cowork** 是一个面向个人用户的 **AI 创意协作助手（Personal AI Creative Assistant）**，主要目标是让 AI 真正参与完整的端到端创作流程。
+**JarvisX-Cowork** 是一个开源的**个人 AI 创意协作助手（Personal AI Creative Assistant）**，主要面向开放式、端到端的创意工作流程。与只负责某一个生成环节的传统 AI 工具不同，JarvisX-Cowork 探索如何让 Agent 从最初的创意构思一直参与到最终成果交付。
 
-传统生成式 AI 工具通常只能完成某一个孤立环节，例如生成一张图片、回答一个问题或生成一段文字。但真实创作过程往往由多个相互关联的阶段组成，包括灵感寻找、参考资料收集、内容构思、素材组织、视觉内容生成、中间结果修改以及最终作品整理。
+真实创作过程通常包含多个相互关联的阶段，例如寻找灵感、搜索参考资料、形成创意方案、生成视觉素材、修改和优化中间结果、制作视频，以及最终整理为演示文稿、文档或其他交付成果。
 
-JarvisX-Cowork 尝试将 Agent 能力融入这一完整流程，使 AI 不再只是一个偶尔调用的生成工具，而是能够在不同创作阶段持续协助用户完成任务的 **Personal AI Coworker**。
+JarvisX-Cowork 将这些能力整合到统一的创意工作流中。一个典型流程可以从空白创意空间开始，通过 **WebSearch** 搜索参考内容，随后进行图像生成，再借助 **Adobe Lightroom** 等专业工具完成视觉优化，并进一步生成视频以及制作 Demo、Presentation Deck 或 Document 等最终成果。
 
-因此，该项目重点探索 **Human-AI Creative Collaboration**：如何让多模态 Agent 从传统的单一功能工具进一步发展为能够理解创作上下文、参与多阶段任务并长期协助用户完成复杂目标的智能协作者。
+在单独的生成与编辑工具之外，JarvisX-Cowork 还通过**持续规划（Persistent Planning）、共享记忆（Shared Memory）以及结构化工具接口（Structured Tool Interfaces）**帮助 Agent 在较长的任务过程中保持连贯的项目状态。同时，它还具备文件操作、命令执行、Web 信息获取、任务规划以及 Human-in-the-Loop 权限确认等通用 Agent 能力。
+
+需要注意的是，**JarvisX-Cowork 本身并不是一个新的生成式基础模型**。更准确地说，它是一个面向个人创作场景的 **End-to-End Creative-Agent Harness / Application**，通过统一工作环境对已有模型、专业工具和 Creative Skills 进行组织与调用。
+
+因此，JarvisX-Cowork 将 AI 从传统的单一生成工具进一步扩展为能够贯穿“**灵感 → 搜索 → 生成 → 优化 → 视频 → 最终交付**”全过程的 **Personal AI Creative Coworker**。
 
 ---
 
@@ -517,7 +531,9 @@ JarvisX-Cowork 尝试将 Agent 能力融入这一完整流程，使 AI 不再只
 **Year:** 2025  
 **Venue:** Conference on Neural Information Processing Systems (**NeurIPS 2025**)  
 **Preprint:** arXiv:2506.17612  
-**First Submitted:** June 21, 2025
+**First Submitted:** June 21, 2025  
+**Method Type:** MLLM-driven professional photo-retouching agent  
+**Task:** Intelligent professional photo retouching  
 
 **Authors:**  
 Yunlong Lin, Zixu Lin, Kunjie Lin, Jinbin Bai, Panwang Pan, Chenxin Li, Haoyu Chen, Zhongdao Wang, Xinghao Ding, Wenbo Li, Shuicheng Yan
@@ -533,13 +549,13 @@ Yunlong Lin, Zixu Lin, Kunjie Lin, Jinbin Bai, Panwang Pan, Chenxin Li, Haoyu Ch
 ### Highlights
 
 - Introduces an **MLLM-driven intelligent agent** for professional photo retouching.
-- Understands natural-language user intentions and imitates the reasoning process of professional artists.
-- Coordinates more than **200 Adobe Lightroom retouching tools**.
-- Uses two-stage training with Chain-of-Thought supervised fine-tuning and **GRPO-R**.
-- Introduces the **Agent-to-Lightroom Protocol** for seamless interaction with Lightroom.
-- Proposes **MMArt-Bench**, constructed from real-world user editing scenarios.
-- Supports fine-grained global and local image adjustment.
-- Demonstrates strong generalization, controllability, and user-friendly interaction.
+- Understands natural-language user intentions and mimics the reasoning process of professional artists.
+- Intelligently coordinates more than **200 retouching tools within Adobe Lightroom**.
+- Employs a two-stage training strategy consisting of **Chain-of-Thought supervised fine-tuning** followed by **Group Relative Policy Optimization for Retouching (GRPO-R)**.
+- Introduces the **Agent-to-Lightroom Protocol** for seamless integration between the intelligent agent and Adobe Lightroom.
+- Develops **MMArt-Bench** for comprehensive evaluation of professional photo-retouching performance.
+- Provides **fine-grained control over both global and local adjustments**.
+- Outperforms GPT-4o by **60% on average pixel-level content-fidelity metrics** on MMArt-Bench while maintaining comparable instruction-following capabilities.
 
 </td>
 </tr>
@@ -547,33 +563,35 @@ Yunlong Lin, Zixu Lin, Kunjie Lin, Jinbin Bai, Panwang Pan, Chenxin Li, Haoyu Ch
 
 ### English Introduction
 
-**JarvisArt** is an intelligent **photo-retouching agent** designed to bridge high-level human artistic intentions and professional image-editing operations.
+**JarvisArt** is an **MLLM-driven intelligent photo-retouching agent** designed to bridge the gap between high-level human artistic intentions and professional image-editing operations.
 
-Professional software such as Adobe Lightroom provides powerful editing capabilities, but effective use requires substantial technical expertise, artistic judgment, and manual effort. Existing AI editing systems offer greater automation, but often suffer from limited controllability and insufficient generalization for diverse and personalized editing requirements.
+Professional software such as Adobe Lightroom provides powerful and highly adjustable editing capabilities, but effective use often requires substantial technical expertise, artistic judgment, and manual effort. Existing AI-based editing solutions provide greater automation, yet they may suffer from limited adjustability and poor generalization when handling diverse and personalized editing requirements.
 
-JarvisArt addresses this gap using a **Multimodal Large Language Model (MLLM)-driven agent**. The system understands natural-language user intent, analyzes visual content, imitates the reasoning process of professional artists, and intelligently coordinates more than **200 retouching tools in Adobe Lightroom**.
+JarvisArt addresses this challenge through a **Multimodal Large Language Model (MLLM)-driven agent**. The system understands natural-language user intent, analyzes visual content, mimics the reasoning process of professional artists, and intelligently coordinates more than **200 retouching tools within Adobe Lightroom**.
 
-The model adopts a two-stage training strategy. First, Chain-of-Thought supervised fine-tuning establishes fundamental visual reasoning and tool-use skills. It then applies **Group Relative Policy Optimization for Retouching (GRPO-R)** to further improve editing decisions and professional tool proficiency.
+JarvisArt adopts a two-stage training strategy. First, **Chain-of-Thought supervised fine-tuning** establishes fundamental reasoning and tool-use capabilities. It then applies **Group Relative Policy Optimization for Retouching (GRPO-R)** to further improve decision-making and proficiency in professional retouching tools.
 
-JarvisArt also introduces the **Agent-to-Lightroom Protocol**, enabling seamless interaction between the intelligent agent and Lightroom.
+To connect high-level agent decisions with executable operations in professional editing software, JarvisArt introduces the **Agent-to-Lightroom Protocol**, enabling seamless interaction between the intelligent agent and Adobe Lightroom.
 
-To evaluate professional photo-retouching performance, the project introduces **MMArt-Bench**, a benchmark constructed from real-world editing scenarios.
+For evaluation, JarvisArt develops **MMArt-Bench**, providing a benchmark for comprehensive assessment of professional photo-retouching performance across diverse scenarios. JarvisArt demonstrates strong generalization and fine-grained control over both global and local adjustments. On MMArt-Bench, it outperforms GPT-4o by **60% on average pixel-level metrics for content fidelity**, while maintaining comparable instruction-following capabilities.
 
-Overall, JarvisArt demonstrates how multimodal agents can serve as professional creative collaborators, translating abstract artistic intentions into **controllable, fine-grained, and executable photo-retouching operations**.
+Overall, JarvisArt demonstrates how multimodal agents can function as professional creative collaborators, translating abstract user intentions into **controllable, fine-grained, and executable photo-retouching operations** within professional editing software.
 
 ### 中文简介
 
-**JarvisArt** 是一个面向专业照片修饰场景的**智能修图 Agent**，旨在解决用户高层艺术意图与专业图像编辑操作之间存在的巨大鸿沟。
+**JarvisArt** 是一个由**多模态大语言模型（MLLM）驱动的专业照片修饰 Agent**，旨在弥合用户高层艺术意图与专业图像编辑操作之间的鸿沟。
 
-Adobe Lightroom 等专业软件虽然具有非常丰富的编辑能力，但用户通常需要掌握大量参数、专业工具和视觉设计知识，才能将自己的审美需求转换为具体操作。传统 AI 图像编辑系统虽然提高了自动化程度，却往往存在可控性不足、泛化能力有限以及难以满足复杂个性化需求等问题。
+Adobe Lightroom 等专业照片编辑软件具有丰富且高度可调的修图能力，但有效使用这些工具通常需要较强的专业知识、艺术判断能力以及大量人工操作。现有 AI 图像编辑方法虽然提高了自动化程度，但在面对多样化和个性化的编辑需求时，仍可能存在可调节性不足和泛化能力有限等问题。
 
-JarvisArt 采用 **MLLM 驱动的 Agent 架构**。智能体能够理解用户自然语言中的编辑需求，同时分析输入图像，并模仿专业艺术家的推理过程，在 Adobe Lightroom 中智能协调超过 **200 个专业修图工具**。
+JarvisArt 采用 **MLLM 驱动的 Agent 架构**。智能体能够理解用户通过自然语言表达的编辑意图、分析视觉内容，并模仿专业艺术家的推理过程，从而在 Adobe Lightroom 中智能协调超过 **200 个专业修图工具**。
 
-在训练方面，JarvisArt 采用两阶段方案：首先通过 Chain-of-Thought 监督微调获得基础视觉推理和工具调用能力；随后使用专门针对修图任务设计的 **GRPO-R（Group Relative Policy Optimization for Retouching）**进一步提升决策能力和工具使用水平。
+在训练方面，JarvisArt 采用两阶段策略。首先通过 **Chain-of-Thought 监督微调（CoT SFT）**建立基础推理和工具使用能力；随后采用专门面向照片修饰任务设计的 **GRPO-R（Group Relative Policy Optimization for Retouching）**，进一步提升 Agent 的编辑决策能力以及专业工具使用水平。
 
-此外，项目提出 **Agent-to-Lightroom Protocol**，实现 Agent 与 Lightroom 之间的无缝交互，并构建来自真实用户编辑场景的 **MMArt-Bench** 作为专业修图评测基准。
+为了将 Agent 的高层决策转化为能够在专业软件中真正执行的编辑操作，JarvisArt 进一步提出 **Agent-to-Lightroom Protocol**，实现智能体与 Adobe Lightroom 之间的无缝交互。
 
-JarvisArt 展示了多模态智能体作为专业创意协作者的可能性，使 AI 能够将抽象艺术意图转化为**细粒度、可控且真正可以在专业软件中执行的图像编辑操作**。
+在评测方面，项目构建了 **MMArt-Bench**，用于综合评估专业照片修饰性能。JarvisArt 展现出良好的泛化能力以及对全局和局部调整的细粒度控制能力。在 MMArt-Bench 上，其 Content Fidelity 的平均 Pixel-Level Metrics 相比 GPT-4o **提升 60%**，同时保持了相当的 Instruction-Following 能力。
+
+总体而言，JarvisArt 展示了多模态智能体作为**专业创意协作者**的可能性，使 AI 能够将抽象的用户艺术意图转化为在专业编辑软件中**可控、细粒度且真正可执行的照片修饰操作**。
 
 ---
 
@@ -596,11 +614,11 @@ JarvisArt 展示了多模态智能体作为专业创意协作者的可能性，�
 **Year:** 2025  
 **Venue:** IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR 2025**)  
 **Publication Date:** June 2025  
-**Method Type:** Intelligent image-restoration agent  
-**Task:** Image restoration for robust autonomous-driving perception  
+**Method Type:** VLM-powered intelligent image-restoration agent  
+**Task:** Intelligent image restoration for robust vision-centric perception  
 
 **Authors:**  
-Yunlong Lin, Zixu Lin, Haoyu Chen, Panwang Pan, Chenxin Li, Sixiang Chen, Wen Kairun, Yeying Jin, Wenbo Li, Xinghao Ding
+Yunlong Lin, Zixu Lin, Haoyu Chen, Panwang Pan, Chenxin Li, Sixiang Chen, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding
 
 **Links:**  
 [Project](https://cvpr2025-jarvisir.github.io/) /
@@ -611,11 +629,12 @@ Yunlong Lin, Zixu Lin, Haoyu Chen, Panwang Pan, Chenxin Li, Sixiang Chen, Wen Ka
 ### Highlights
 
 - Published at **CVPR 2025**.
-- Introduces an intelligent image-restoration agent for autonomous-driving perception.
-- Targets diverse real-world degradation and adverse visual conditions.
-- Uses intelligent analysis and decision-making to coordinate appropriate restoration capabilities.
-- Connects low-level image restoration with high-level downstream visual perception.
-- Explores an **agent-oriented restoration paradigm** instead of relying on one fixed restoration model.
+- Introduces a **VLM-powered intelligent image-restoration agent** for robust vision-centric perception under unpredictable and coupled weather degradations.
+- Uses a **VLM as the controller** to analyze degradation conditions, plan restoration tasks, and coordinate multiple expert restoration models.
+- Employs a two-stage training framework consisting of **Supervised Fine-Tuning (SFT)** and **Human Feedback Alignment** to improve robustness, reduce hallucinations, and enhance real-world generalization.
+- Introduces **CleanBench**, a large-scale instruction-response dataset containing **150K synthetic and 80K real entries** for training and evaluation.
+- Connects **low-level image restoration** with **high-level downstream visual perception** in autonomous-driving environments.
+- Achieves a **50% improvement in the average of all perception metrics on CleanBench-Real** compared with existing methods.
 
 </td>
 </tr>
@@ -623,31 +642,39 @@ Yunlong Lin, Zixu Lin, Haoyu Chen, Panwang Pan, Chenxin Li, Sixiang Chen, Wen Ka
 
 ### English Introduction
 
-**JarvisIR** explores intelligent image restoration from an **agent-oriented perspective**, with the goal of improving visual perception in autonomous-driving scenarios.
+**JarvisIR** is a **VLM-powered intelligent image-restoration agent** designed to improve the robustness of vision-centric perception systems under unpredictable and coupled weather degradations in real-world environments.
 
-Real-world autonomous systems frequently encounter degraded visual inputs caused by challenging environments and imaging conditions. These degradations reduce image quality and can consequently affect downstream perception tasks.
+Real-world autonomous-driving systems frequently encounter complex visual degradations caused by adverse weather and challenging imaging conditions. These degradations may occur simultaneously and can substantially affect not only image quality but also downstream perception performance.
 
-Traditional image-restoration methods typically rely on fixed models designed for specific degradation types. In contrast, JarvisIR introduces intelligent analysis and decision-making into the restoration workflow.
+Existing restoration approaches are often either **task-specific methods** that rely on prior knowledge of degradation types, or **all-in-one methods** that may suffer from substantial domain gaps when trained primarily on synthetic data. Moreover, when multiple specialized restoration models are combined, their execution order can significantly influence the final restoration quality.
 
-The system can analyze the degradation condition of an input image and coordinate appropriate restoration capabilities according to the observed visual problem.
+JarvisIR addresses these challenges by using a **Vision-Language Model (VLM) as a controller**. Instead of relying on a single fixed restoration model, the VLM analyzes the current visual degradation, plans appropriate restoration tasks, selects specialized expert models, and coordinates their execution to handle complex real-world conditions.
 
-This transforms image restoration from a fixed low-level processing pipeline into a more flexible and adaptive intelligent workflow.
+To further improve robustness and generalization, JarvisIR adopts a two-stage training framework consisting of **Supervised Fine-Tuning (SFT)** and **Human Feedback Alignment**. The human-feedback alignment stage enables the VLM to effectively leverage large-scale real-world degraded data despite the lack of corresponding paired ground-truth images, while helping reduce hallucinations and improve generalization under adverse weather.
 
-By connecting restoration decisions with autonomous-driving perception requirements, JarvisIR establishes a bridge between **low-level image enhancement and restoration** and **high-level visual perception**.
+The project also introduces **CleanBench**, a comprehensive instruction-response dataset containing **150K synthetic and 80K real entries**, to support both the training and evaluation of JarvisIR.
 
-The work was published at the **IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025**.
+By combining VLM-based decision-making with specialized restoration models, JarvisIR transforms image restoration from a fixed low-level processing pipeline into a more autonomous and adaptive agent-based workflow. On CleanBench-Real, it achieves a **50% improvement in the average of all perception metrics** compared with existing methods.
+
+Overall, JarvisIR establishes a connection between **low-level image restoration** and **high-level vision-centric perception**, demonstrating how intelligent restoration agents can provide more reliable visual inputs for autonomous-driving systems operating under complex real-world conditions.
 
 ### 中文简介
 
-**JarvisIR** 是一个面向自动驾驶视觉感知场景的**智能图像恢复 Agent**，发表于 **CVPR 2025**。该项目重点研究复杂现实环境中的图像退化问题，以及智能图像恢复如何提升自动驾驶视觉系统的可靠性。
+**JarvisIR** 是一个由**视觉语言模型（VLM）驱动的智能图像恢复 Agent**，旨在提升视觉感知系统在真实世界不可预测、复合恶劣天气退化条件下的鲁棒性。
 
-现实中的自动驾驶车辆可能遇到多种复杂成像和环境条件。这些视觉退化不仅会降低图像本身的质量，还可能进一步影响目标检测、场景理解以及其他下游视觉感知任务。
+现实中的自动驾驶视觉系统经常面对复杂的恶劣天气与成像条件，不同类型的图像退化还可能同时出现并相互耦合。这些问题不仅会降低输入图像本身的视觉质量，还可能进一步影响后续的视觉感知性能。
 
-传统图像恢复方法通常针对某一种特定退化类型设计固定模型，而 JarvisIR 则从 **Agent-Oriented Image Restoration** 的角度重新组织整个恢复流程。
+现有方法主要面临两类问题：一类是针对特定退化类型设计的 **Task-Specific Restoration Methods**，通常需要预先知道图像的退化类型；另一类是 **All-in-One Restoration Methods**，这类方法在主要依赖合成数据进行监督训练时，面对真实世界数据可能存在明显的 Domain Gap。此外，当多个专业恢复模型组合使用时，不同模型的执行顺序也可能显著影响最终恢复效果。
 
-系统能够主动分析当前输入图像所面临的退化状态，并根据不同问题协调相应的恢复能力，从而形成更加灵活和自适应的智能恢复流程。
+JarvisIR 的核心思想是让 **VLM 充当整个恢复系统的 Controller**。系统并不依赖单一固定恢复模型，而是由 VLM 分析当前输入图像的退化情况、规划恢复任务、选择合适的专业恢复模型，并协调多个 Expert Restoration Models 的执行，从而处理复杂且耦合的真实世界图像退化。
 
-因此，JarvisIR 不再将图像恢复视为完全独立的低层视觉任务，而是进一步探索如何将**低层图像恢复与高层自动驾驶视觉感知相结合**，为复杂真实环境中的智能视觉系统提供更加可靠的视觉输入。
+在训练方面，JarvisIR 采用由 **Supervised Fine-Tuning（SFT）**和 **Human Feedback Alignment** 组成的两阶段框架。Human Feedback Alignment 使 VLM 能够在缺少成对 Ground Truth 的情况下有效利用大规模真实退化数据，同时进一步提升系统鲁棒性、减少幻觉并增强真实恶劣天气环境下的泛化能力。
+
+为了支持系统训练与评测，项目进一步构建了 **CleanBench**，其中包含约 **15 万组合成数据和 8 万组真实数据对应的 Instruction-Response Entries**。
+
+通过将 VLM 的分析、规划与决策能力和多个专业图像恢复模型相结合，JarvisIR 将传统固定的低层图像恢复流程扩展为更加自主、灵活和自适应的 **Agent-Based Restoration Workflow**。在 CleanBench-Real 上，JarvisIR 相比现有方法在所有感知指标平均值上取得了约 **50% 的提升**。
+
+因此，JarvisIR 不再将图像恢复视为完全独立的低层视觉任务，而是进一步建立了**低层图像恢复（Low-Level Image Restoration）与高层视觉感知（High-Level Visual Perception）之间的联系**。
 
 ---
 
@@ -655,17 +682,18 @@ The work was published at the **IEEE/CVF Conference on Computer Vision and Patte
 
 ## SmartDSP Lab
 
-### From Intelligent Visual Restoration to Canvas-Native Creative Agents
+### From Intelligent Visual Restoration to Canvas-Native Multimodal Creative Agents
 
 **JarvisIR → JarvisArt → JarvisEvo → JarvisX-Cowork → JarvisHub**
 
+**Restoration → Retouching → Self-Evolution → Creative Coworking → Canvas-Native Agents**
+
 <br>
 
-Exploring **multimodal agents, intelligent visual systems, human-AI collaboration,  
-creative AI, and long-horizon multimodal workflows**.
+Exploring **multimodal agents, intelligent visual systems, professional image editing, human-AI creative collaboration, and long-horizon multimodal creation**.
 
 <br><br>
 
-<sub>SmartDSP Lab · Datasets · Benchmarks · Publications · Open-source Research Projects</sub>
+<sub>SmartDSP Lab · Datasets · Benchmarks · Research Publications · Open-Source Projects · Interactive Demos</sub>
 
 </div>
