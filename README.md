@@ -22,9 +22,9 @@ The **SmartDSP Jarvis Research Collection** brings together a series of research
 
 The collection currently consists of three major components:
 
-- **📦 Datasets & Benchmarks** — Public datasets and evaluation benchmarks for professional photo retouching, intelligent image editing, and adverse-condition image restoration, including **MMArt-PPR10K**, **MMArt-Bench**, **ArtEdit-Bench**, and **CleanBench**.
-- **📚 Publications from SmartDSP Lab** — Research works spanning intelligent image restoration, multimodal photo-retouching agents, self-evolving editing agents, personal creative assistants, and canvas-native multimodal agents.
-- **🚀 Jarvis Research Projects** — A family of intelligent visual and creative systems, including **JarvisIR**, **JarvisArt**, **JarvisEvo**, **JarvisX-Cowork**, and **JarvisHub**.
+- ** Datasets & Benchmarks** — Public datasets and evaluation benchmarks for professional photo retouching, intelligent image editing, and adverse-condition image restoration, including **MMArt-PPR10K**, **MMArt-Bench**, **ArtEdit-Bench**, and **CleanBench**.
+- ** Publications from SmartDSP Lab** — Research works spanning intelligent image restoration, multimodal photo-retouching agents, self-evolving editing agents, personal creative assistants, and canvas-native multimodal agents.
+- ** Jarvis Research Projects** — A family of intelligent visual and creative systems, including **JarvisIR**, **JarvisArt**, **JarvisEvo**, **JarvisX-Cowork**, and **JarvisHub**.
 
 Together, these works reflect a continuous research trajectory:
 
@@ -46,7 +46,6 @@ The overall goal is to explore how AI systems can move beyond isolated generatio
   - [MMArt-Bench](#mmart-bench)
   - [ArtEdit-Bench](#artedit-bench)
   - [CleanBench](#cleanbench)
-  - [Dataset Availability for Other Jarvis Projects](#dataset-availability-for-other-jarvis-projects)
 
 - [2. Publications from SmartDSP Lab](#2-publications-from-smartdsp-lab)
   - [Publication Summary](#publication-summary)
