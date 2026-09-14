@@ -376,7 +376,9 @@ JarvisHub 采用 **Canvas State、Protocol Bridge 和 Agent Runtime** 三层架�
 **Year:** 2026  
 **Venue:** IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR 2026**)  
 **Preprint:** arXiv:2511.23002  
-**First Submitted:** November 28, 2025
+**First Submitted:** November 28, 2025  
+**Method Type:** Self-evolving photo-editing agent  
+**Task:** Intelligent agent-based photo editing  
 
 **Authors:**  
 Yunlong Lin, Linqing Wang, Kunjie Lin, Zixu Lin, Kaixiong Gong, Wenbo Li, Bin Lin, Zhenxi Li, Shiyi Zhang, Yuyang Peng, Wenxun Dai, Xinghao Ding, Chunyu Wang, Qinglin Lu
@@ -390,13 +392,13 @@ Yunlong Lin, Linqing Wang, Kunjie Lin, Zixu Lin, Kaixiong Gong, Wenbo Li, Bin Li
 
 ### Highlights
 
-- Introduces a unified image-editing agent that imitates the iterative workflow of a professional human designer.
-- Proposes **interleaved Multimodal Chain-of-Thought (iMCoT)** reasoning.
-- Introduces **Synergistic Editor-Evaluator Policy Optimization (SEPO)** for self-improvement without external rewards.
-- Targets both **instruction hallucination** and **reward hacking** in agent-based image editing.
-- Supports global and local fine-grained editing.
-- Integrates Adobe Lightroom into the agent workflow.
-- Demonstrates strong preservative editing and pixel-level content fidelity on ArtEdit-Bench.
+- Introduces a unified **self-evolving image-editing agent** that emulates an expert human designer through iterative editing, tool selection, evaluation, and reflection.
+- Proposes **interleaved Multimodal Chain-of-Thought (iMCoT)** to integrate visual observations with textual reasoning and mitigate instruction hallucination.
+- Introduces **Synergistic Editor-Evaluator Policy Optimization (SEPO)**, which jointly optimizes the Editor and Evaluator to enable self-improvement without external rewards.
+- Addresses two key challenges in agent-based image editing: **instruction hallucination** and **reward hacking**.
+- Supports both **global and local fine-grained photo editing** through seamless integration with Adobe Lightroom.
+- Establishes a unified **Editor-Evaluator framework** in which editing and evaluation capabilities can improve synergistically.
+- On ArtEdit-Bench, outperforms Nano-Banana by **18.95% on average on preservative editing metrics**, including a **44.96% improvement in pixel-level content fidelity**.
 
 </td>
 </tr>
@@ -404,29 +406,31 @@ Yunlong Lin, Linqing Wang, Kunjie Lin, Zixu Lin, Kaixiong Gong, Wenbo Li, Bin Li
 
 ### English Introduction
 
-**JarvisEvo** is a unified **self-evolving photo-editing agent** designed to emulate how an expert human designer edits, evaluates, reflects, and progressively improves visual content.
+**JarvisEvo** is a unified **self-evolving photo-editing agent** designed to emulate how an expert human designer iteratively edits visual content, selects appropriate tools, evaluates intermediate results, reflects on previous decisions, and progressively refines editing outcomes.
 
-Existing editing agents have significantly improved interaction and automation, but important limitations remain. Text-only reasoning can lose critical visual information and lead to instruction hallucination, while policy optimization against static reward models may encourage reward hacking.
+Existing agent-based image-editing systems have substantially improved interactive experiences, editing quality, and creative flexibility. However, two major challenges remain: **instruction hallucination** and **reward hacking**. Text-only Chain-of-Thought reasoning can suffer from information bottlenecks that limit access to important visual information, while policy optimization against static reward models may encourage agents to exploit weaknesses in the reward function.
 
-JarvisEvo addresses the first problem through **interleaved Multimodal Chain-of-Thought (iMCoT)**, which tightly integrates visual observations with the reasoning process. Rather than reasoning only from textual descriptions, the agent can directly consider intermediate visual states while deciding what to do next.
+To address instruction hallucination, JarvisEvo introduces **interleaved Multimodal Chain-of-Thought (iMCoT)**. Instead of relying exclusively on textual reasoning, iMCoT interleaves visual observations with the reasoning process, allowing the agent to incorporate intermediate visual feedback into its decision-making and thereby improve instruction following and editing quality.
 
-To address reward hacking and enable self-improvement, JarvisEvo further introduces **Synergistic Editor-Evaluator Policy Optimization (SEPO)**. The Editor and Evaluator improve jointly, forming a closed loop of **editing → evaluation → reflection → refinement**.
+To address reward hacking and enable self-improvement, JarvisEvo further proposes **Synergistic Editor-Evaluator Policy Optimization (SEPO)**. Rather than optimizing the editing policy against a fixed external reward model, SEPO synergistically optimizes the **Editor and Evaluator**, allowing editing and evaluation capabilities to improve together without relying on external rewards.
 
-Through its integration with Adobe Lightroom, JarvisEvo supports both global and local fine-grained editing, advancing intelligent image editing from passive instruction execution toward agents capable of **visual reasoning, self-evaluation, tool selection, reflection, and iterative self-improvement**.
+JarvisEvo also integrates **Adobe Lightroom**, enabling both global adjustments and local fine-grained photo editing within a unified agent workflow.
+
+Together, iMCoT and SEPO move intelligent photo editing beyond passive instruction execution toward a **self-evolving Editor-Evaluator agent** capable of multimodal reasoning, tool selection, self-evaluation, reflection, and iterative refinement.
 
 ### 中文简介
 
-**JarvisEvo** 是一个具有**自我演化能力的智能图像编辑 Agent**，其整体工作方式模拟专业设计师在实际修图过程中的行为：理解任务、选择工具、执行编辑、观察结果、评价当前效果，并根据评价结果持续反思和优化后续操作。
+**JarvisEvo** 是一个具有**自我演化能力的智能照片编辑 Agent（Self-Evolving Photo-Editing Agent）**，其整体工作方式模拟专业设计师的迭代式修图过程：执行编辑、选择合适工具、观察和评价编辑结果，并对之前的决策进行反思，从而持续优化最终编辑效果。
 
-针对现有智能编辑 Agent 中存在的两个关键问题，JarvisEvo 提出了对应解决方案。
+针对现有 Agent-Based Image Editing 中的两个关键问题——**指令幻觉（Instruction Hallucination）**和**奖励黑客（Reward Hacking）**——JarvisEvo 分别提出了 iMCoT 和 SEPO 两项核心技术。
 
-首先，纯文本 Chain-of-Thought 在复杂视觉编辑任务中容易受到信息瓶颈影响，从而产生指令理解偏差或视觉事实错误。为此，JarvisEvo 提出了 **iMCoT（Interleaved Multimodal Chain-of-Thought）**，将视觉观察与推理过程交错结合，使智能体能够直接依据当前图像状态进行推理和决策。
+首先，纯文本 Chain-of-Thought 在复杂视觉编辑任务中存在视觉信息瓶颈，可能导致推理结果与实际图像内容不一致，从而产生 Instruction Hallucination。为此，JarvisEvo 提出了 **iMCoT（Interleaved Multimodal Chain-of-Thought）**，将视觉观察与文本推理过程交错结合，使 Agent 能够在决策过程中利用中间视觉反馈，从而提升指令跟随能力和编辑质量。
 
-其次，针对基于固定 Reward Model 的策略优化可能产生的 Reward Hacking 问题，JarvisEvo 提出了 **SEPO（Synergistic Editor-Evaluator Policy Optimization）**。Editor 与 Evaluator 在统一框架中协同优化，使 Agent 能够通过“**编辑—评价—反思—改进**”的闭环实现持续自我提升。
+其次，针对使用固定 Reward Model 进行策略优化时可能出现的 Reward Hacking 问题，JarvisEvo 提出了 **SEPO（Synergistic Editor-Evaluator Policy Optimization）**。与依赖固定外部奖励模型的方法不同，SEPO 对 **Editor 和 Evaluator 进行协同优化**，使编辑能力与评价能力能够共同提升，并实现无需外部奖励的自我改进。
 
-此外，JarvisEvo 与 Adobe Lightroom 集成，可同时支持全局调整和局部精细编辑。
+此外，JarvisEvo 与 **Adobe Lightroom** 深度集成，使 Agent 能够在统一工作流中同时执行全局调整与局部细粒度照片编辑。
 
-该项目推动智能图像编辑从“一次执行用户指令”的模式进一步发展为具有**视觉推理、自我评价、自我反思和持续优化能力的 Self-Evolving Creative Agent**。
+因此，JarvisEvo 将智能图像编辑从传统的被动指令执行进一步扩展为一个能够进行**多模态推理、工具选择、自我评价、反思以及迭代优化的 Self-Evolving Editor-Evaluator Agent**。
 
 ---
 
