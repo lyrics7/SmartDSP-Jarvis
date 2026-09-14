@@ -271,7 +271,7 @@ This section summarizes the featured Jarvis research projects and publications f
 
 | Year | Project | Research / Method Type | Authors | Venue / Status | Links |
 |---|---|---|---|---|---|
-| 2026 | **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** | Canvas-native multimodal creative-agent framework | Yunlong Lin et al. | Preprint / arXiv 2026 | [Project](https://www.jarvishub.site/) / [Paper](https://arxiv.org/abs/2607.23588) / [Code](https://github.com/LYL1015/JarvisHub) / [HF](https://huggingface.co/papers/2607.23588) |
+| 2026 | **JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents** |Canvas-native multimodal creative-agent harness | Yunlong Lin et al. | Preprint / arXiv 2026 | [Project](https://www.jarvishub.site/) / [Paper](https://arxiv.org/abs/2607.23588) / [Code](https://github.com/LYL1015/JarvisHub) / [HF](https://huggingface.co/papers/2607.23588) |
 | 2026 | **JarvisEvo: Towards a Self-Evolving Photo Editing Agent with Synergistic Editor-Evaluator Optimization** | Self-evolving multimodal photo-editing agent | Yunlong Lin et al. | CVPR 2026 | [Project](https://jarvisevo.vercel.app/) / [Paper](https://arxiv.org/abs/2511.23002) / [Code](https://github.com/LYL1015/JarvisEvo) / [HF](https://huggingface.co/papers/2511.23002) |
 | — | **JarvisX-Cowork: A Personal AI Creative Assistant for End-to-End Creative Workflows** | Personal multimodal creative assistant | — | Demo / Open-source Project | [Code](https://github.com/LYL1015/JarvisX-Cowork) / [Demo](https://youtu.be/SiNsTmGbWlo) |
 | 2025 | **JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent** | MLLM-driven professional photo-retouching agent | Yunlong Lin et al. | NeurIPS 2025 | [Project](https://jarvisart.vercel.app/) / [Paper](https://arxiv.org/abs/2506.17612) / [Code](https://github.com/LYL1015/JarvisArt) / [HF](https://huggingface.co/papers/2506.17612) |
@@ -296,10 +296,11 @@ This section summarizes the featured Jarvis research projects and publications f
 <td width="69%">
 
 **Year:** 2026  
-**Venue / Status:** arXiv · Computer Vision and Pattern Recognition (cs.CV)  
+**Venue / Status:** arXiv Preprint  
+**arXiv Category:** Computer Vision and Pattern Recognition (cs.CV)  
 **Submitted:** July 26, 2026  
-**Method Type:** Canvas-native multimodal creative-agent framework  
-**Task:** Long-horizon multimodal creative production and workflow orchestration  
+**Method Type:** Canvas-native multimodal creative-agent harness  
+**Task:** Long-horizon multimodal creative production  
 
 **Authors:**  
 Yunlong Lin, Zixu Lin, Zhaohu Xing, Biqiang Li, Chenxin Li, Haonan Wang, Haitao Wu, Hengyu Liu, Jianghai Chen, Kaituo Feng, Kaixin Li, Shawn Chen, Shijue Huang, Sixiang Chen, Tsung-Yi Ho, Wenxuan Huang, Xiangyan Liu, Xiaomeng Hu, Xuanhua He, Yan Sun, Yunqing Zhao, Zhiqin Yang, Zehan Wang, Zhengyang Tang, Tianyu Pang, Xiangyu Yue
@@ -312,12 +313,13 @@ Yunlong Lin, Zixu Lin, Zhaohu Xing, Biqiang Li, Chenxin Li, Haonan Wang, Haitao 
 
 ### Highlights
 
-- Introduces a **canvas-native creative-agent harness** for long-horizon multimodal creation.
-- Treats the editable canvas simultaneously as the **user workspace, external memory, action space, and shared project state**.
-- Represents multimodal artifacts, dependencies, versions, and human feedback through structured canvas nodes and links.
+- Introduces an open **canvas-native creative-agent harness** for long-horizon multimodal creation.
+- Treats the editable canvas simultaneously as the **user workspace, agent external memory, action space, and shared project state**.
+- Represents multimodal artifacts, dependencies, versions, status, and feedback through structured canvas nodes and links.
 - Employs a three-layer architecture consisting of **Canvas State, Protocol Bridge, and Agent Runtime**.
-- Enables agents to continuously plan, generate, revise, organize, and maintain multimodal projects.
-- Preserves human steerability by allowing users to inspect, guide, modify, and intervene throughout the creative process.
+- Enables agents to progressively **plan, generate, revise, and organize** multimodal projects over extended creative workflows.
+- Preserves **human steerability** by allowing users to inspect, guide, modify, and intervene throughout the creative process.
+- Functions as an **agent orchestration harness rather than a standalone generative model**, integrating external models and tools within a persistent and inspectable creative workspace.
 
 </td>
 </tr>
@@ -325,27 +327,33 @@ Yunlong Lin, Zixu Lin, Zhaohu Xing, Biqiang Li, Chenxin Li, Haonan Wang, Haitao 
 
 ### English Introduction
 
-**JarvisHub** is an open harness for **canvas-native multimodal creative agents**, designed to support long-horizon creative production.
+**JarvisHub** is an open harness for **canvas-native multimodal creative agents**, designed to support long-horizon multimodal creative production.
 
-Modern generative models are capable of producing high-quality images, videos, audio, webpages, UI elements, presentations, and other creative assets. However, real creative work rarely consists of isolated prompt-output interactions. Instead, a complete project evolves through references, drafts, alternatives, edits, failed attempts, version relationships, tool actions, evaluation signals, and human feedback.
+Modern generative models can produce high-quality images, videos, audio clips, webpages, UI elements, presentations, and other creative assets. However, real-world creative work rarely consists of isolated prompt-output interactions. Instead, a complete project evolves through references, drafts, alternatives, edits, failed attempts, version relationships, tool actions, evaluation signals, and human feedback, which together form an evolving project state.
 
-JarvisHub addresses this limitation by placing an editable visual **Canvas** at the center of the agent workflow. The Canvas is not merely an interface: it also functions as the agent's external memory, action space, and persistent shared project state.
+JarvisHub addresses this challenge by placing an editable visual **Canvas** at the center of the agent workflow. Rather than serving merely as a user interface, the Canvas simultaneously functions as the **user workspace, the agent's external memory, its action space, and a persistent shared project state**.
 
-Multimodal artifacts and their relationships are explicitly represented through typed nodes and links, allowing information to persist throughout a long creative process.
+Multimodal artifacts and their relationships are represented through typed canvas nodes and links, allowing references, dependencies, versions, status, and feedback to remain explicitly represented throughout extended creative workflows.
 
-Through its **Canvas State – Protocol Bridge – Agent Runtime** architecture, JarvisHub enables creative agents to work inside an inspectable and editable workspace. This moves Creative AI beyond isolated tool invocation toward sustained, human-steerable automation in which an agent can continuously plan, generate, revise, organize, and maintain complex multimodal projects.
+JarvisHub organizes this process through a three-layer architecture consisting of **Canvas State, Protocol Bridge, and Agent Runtime**. Canvas State maintains editable artifacts and their relationships; the Protocol Bridge exposes capabilities, validates actions, and manages state transitions; and the Agent Runtime observes the canvas, plans actions, invokes models and tools, and returns results to the shared workspace.
+
+Importantly, JarvisHub is **not intended to replace existing generative models**. Instead, it provides an open and inspectable agent runtime for preserving context, orchestrating external tools and models, incorporating feedback, and recovering from failures across long-horizon creative workflows.
+
+This design moves Creative AI beyond isolated generation and tool invocation toward **sustained, human-steerable creative automation**, where agents can progressively plan, generate, revise, and organize complex multimodal projects while users remain able to inspect, guide, and intervene throughout the process.
 
 ### 中文简介
 
-**JarvisHub** 是一个面向 **Canvas-Native Multimodal Creative Agents（画布原生多模态创意智能体）** 的开放式智能体框架，主要研究 AI 如何完成长周期、多阶段、具有持续项目状态的复杂多模态创作任务。
+**JarvisHub** 是一个面向 **Canvas-Native Multimodal Creative Agents（画布原生多模态创意智能体）** 的开放式 Agent Harness，主要研究 AI 如何在持续维护项目状态的情况下完成**长周期、多阶段的复杂多模态创作任务**。
 
-当前的图像、视频、音频、网页和演示文稿生成模型已经具有较强的单次内容生成能力，但真实创作过程通常并不是简单的“输入 Prompt—生成结果”。一个完整项目往往还包含参考资料、多个草稿、候选方案、修改过程、失败尝试、版本关系、工具操作、评价信号以及持续的人类反馈。
+当前的图像、视频、音频、网页、UI 和演示文稿等生成模型已经具有较强的单次内容生成能力，但真实创作过程通常并不是简单的“输入 Prompt—生成结果”。一个完整项目往往还包含参考资料、多个草稿、候选方案、修改过程、失败尝试、版本关系、工具操作、评价信号以及持续的人类反馈，这些信息共同构成不断演化的项目状态。
 
-JarvisHub 将**可编辑 Canvas** 作为整个系统的核心。Canvas 不仅承担用户交互界面的作用，同时还充当智能体的外部记忆、操作空间以及共享项目状态。不同多模态内容、版本关系、依赖关系和反馈信息都可以通过结构化节点和连接进行表示。
+JarvisHub 将**可编辑 Canvas** 作为整个系统的核心。Canvas 不仅承担用户交互界面的作用，同时还充当**用户工作空间、智能体的外部记忆、操作空间以及持久化的共享项目状态**。多模态内容以及它们之间的依赖关系、版本关系、状态和反馈信息，都可以通过结构化的 Canvas 节点与连接进行显式表示。
 
-通过 **Canvas State、Protocol Bridge 和 Agent Runtime** 三层架构，JarvisHub 使智能体能够在透明、可查看、可修改的创意状态中持续工作。
+JarvisHub 采用 **Canvas State、Protocol Bridge 和 Agent Runtime** 三层架构。其中，Canvas State 负责维护可编辑内容及其关系；Protocol Bridge 负责暴露系统能力、验证操作并管理状态转换；Agent Runtime 则负责观察当前 Canvas、规划下一步操作、调用模型与工具，并将新的结果重新写入共享工作空间。
 
-这使 Creative AI 从传统的单次内容生成进一步发展为能够**持续规划、生成、修改、组织和维护复杂项目的长周期多模态创意智能体**。
+需要特别说明的是，**JarvisHub 本身并不是用于替代现有生成模型的新生成模型**。它更接近一个开放、可检查的智能体运行与编排框架，通过整合外部生成模型、工具和其他 Agent 能力，使智能体能够在长期创作过程中保持上下文、利用反馈并从失败中恢复。
+
+因此，JarvisHub 将 Creative AI 从传统的单次内容生成和孤立工具调用进一步扩展为**持续、可干预、以项目状态为中心的长周期多模态创意智能体工作流**。
 
 ---
 
