@@ -84,33 +84,35 @@ This section summarizes the public datasets and evaluation benchmarks associated
 **Task:** Instruction-driven professional photo retouching  
 **Type:** Multimodal paired image-retouching dataset  
 **Source:** Built upon the PPR10K dataset  
-**Content:** Original images, retouched images, user instructions, Lightroom Lua configurations, and XMP editing presets  
+**Content:** Paired original and retouched images, multi-granularity user instructions, and Lua/XMP-based Lightroom editing configurations  
 
 ### English Introduction
 
-**MMArt-PPR10K** is a multimodal dataset developed for research on instruction-driven agentic photo retouching. It extends the original PPR10K dataset by combining paired before-and-after images with natural-language editing instructions and structured Lightroom editing information.
+**MMArt-PPR10K**  is a multimodal dataset developed for research on instruction-driven agentic image retouching. Built upon the original PPR10K dataset, it combines paired original and retouched images with natural-language editing instructions and structured information associated with Lightroom editing operations.
 
-Unlike conventional image-to-image datasets that only provide input and target images, MMArt-PPR10K additionally describes both **what the user wants** and **how the desired visual result can be achieved using professional editing tools**. This makes the dataset particularly suitable for training multimodal photo-retouching agents that must understand user intent, reason about visual content, and translate natural-language instructions into executable editing operations.
+Unlike conventional image-to-image datasets that primarily provide input and target images, MMArt-PPR10K additionally incorporates user instructions at different levels of detail together with Lua/XMP-based editing configurations. These components provide information about both the desired editing outcome and the corresponding professional editing process.
 
-The dataset also provides structured Lua and XMP configurations corresponding to Lightroom editing actions, enabling research on multimodal reasoning, professional tool use, instruction following, and agent-based photo-editing workflows.
+This multimodal structure makes MMArt-PPR10K particularly suitable for research on instruction understanding, multimodal reasoning, professional editing-tool use, and agentic photo-retouching workflows.
 
 ### 中文简介
 
-**MMArt-PPR10K** 是 JarvisArt 面向**指令驱动专业修图 Agent**构建的多模态数据集，在原始 PPR10K 数据集基础上进一步扩展得到。
+**MMArt-PPR10K** 是 JarvisArt 项目面向**指令驱动 Agentic 图像修饰任务**构建的多模态数据集，并基于原始 PPR10K 数据集进行扩展。
 
-与传统仅包含输入图像与目标图像的数据集不同，MMArt-PPR10K 除了提供修图前后的成对图像之外，还进一步加入了不同长度的用户编辑指令，以及 Adobe Lightroom 对应的 Lua 配置和 XMP 编辑预设。
+与主要提供输入图像和目标图像的传统图像到图像数据集不同，MMArt-PPR10K 除了包含修图前后的成对图像之外，还提供不同详细程度的自然语言用户编辑指令，以及与 Lightroom 编辑操作相关的 Lua/XMP 配置信息。
 
-这些信息能够同时描述“**用户想要什么效果**”以及“**专业修图工具如何实现这一效果**”。因此，该数据集不仅适用于传统图像到图像学习，还非常适合研究自然语言编辑指令理解、多模态推理、专业工具调用以及 Agent 驱动的照片修饰流程。
+这些信息能够同时描述用户期望的编辑效果以及与之对应的专业编辑过程。因此，该数据集适合用于研究编辑指令理解、多模态推理、专业修图工具使用以及 Agent 驱动的照片修饰流程。
 
 ### Dataset Structure
 
+Each sample is organized in a unique directory containing paired images, user instructions of varying lengths, and Lightroom-related configuration files.
+
 - `before.jpg` — original unedited image
-- `processed.jpg` — professionally retouched image
+- `processed.jpg` — retouched image
 - `user_want_short` — short user instruction
 - `user_want_middle` — medium-length user instruction
 - `user_want_long` — detailed user instruction
-- `config.lua` — Lightroom Lua editing configuration
-- `config.xmp` — Lightroom XMP metadata / editing preset
+- `config.lua` — Lua configuration used in Lightroom
+- `config.xmp` — XMP metadata and editing preset associated with Lightroom
 
 ### Links
 
@@ -127,30 +129,32 @@ The dataset also provides structured Lua and XMP configurations corresponding to
 
 **Related Project:** JarvisArt  
 **Paper:** *JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent*  
-**Task:** Intelligent photo-retouching evaluation  
-**Type:** Real-world multimodal benchmark  
-**Scale:** 200 benchmark instances across four major scenarios + portrait subset for region-level evaluation  
-**Scenarios:** Portrait · Landscape · Street · Still Life  
+**Task:** Agentic photo-retouching evaluation 
+**Type:** Multiscenario photo-retouching evaluation benchmark
+**Source:** Sampled from the MMArt dataset
+**Scale:** 200 benchmark instances across four major scenarios
+**Scenarios:** Portrait · Landscape · Street Scenes · Still Life
+**Region-Level Evaluation:** 50 human-centered portrait images with mask annotations
 
 ### English Introduction
 
-**MMArt-Bench** is the evaluation benchmark introduced with JarvisArt for assessing intelligent photo-retouching agents under realistic user-editing scenarios.
+**MMArt-Bench** is an evaluation benchmark introduced with JarvisArt to provide a comprehensive assessment of agentic photo-retouching performance. It is sampled from the broader MMArt dataset and covers diverse real-world photographic scenarios.
 
-The benchmark covers four major categories — **portrait photography, landscape photography, street scenes, and still life** — with 50 evaluation instances in each category, resulting in 200 primary benchmark cases. An additional portrait subset with human-region mask annotations is provided for region-level evaluation.
+The benchmark contains four major categories — **portrait, landscape, street scenes, and still life** — with 50 instances in each category, resulting in **200 benchmark instances** in total. Each primary category is further divided into multiple subcategories to cover a broader range of photographic content.
 
-MMArt-Bench is designed to evaluate more than visual attractiveness alone. It focuses on whether an editing agent can correctly follow a user's editing intention while preserving image structure, semantic identity, and regions that should remain unchanged.
+In addition to image-level evaluation, MMArt-Bench supports **region-level evaluation** through a dedicated portrait subset containing **50 human-centered images with mask annotations**. This enables more fine-grained assessment of localized photo-retouching performance.
 
-This makes MMArt-Bench particularly useful for evaluating intelligent agents that perform multi-step reasoning and tool-based editing rather than uncontrolled one-shot image generation.
+MMArt-Bench serves as the evaluation component of the MMArt ecosystem, complementing datasets such as MMArt-PPR10K by providing a standardized benchmark for assessing agentic photo-retouching systems across diverse scenarios and evaluation granularities.
 
 ### 中文简介
 
-**MMArt-Bench** 是 JarvisArt 提出的**智能照片修饰评测基准**，主要用于评估多模态修图 Agent 在真实用户编辑场景下的指令理解能力、视觉质量和内容保持能力。
+**MMArt-Bench** 是 JarvisArt 项目提出的**照片修饰评测基准**，用于对 Agentic 照片修饰系统的性能进行综合评估。该 Benchmark 从更大的**MMArt 数据集**中采样构建，并覆盖多种真实摄影场景。
 
-该基准覆盖 **人像、风景、街景和静物**四类主要场景，每一类包含 50 个主要评测实例，共计 200 个核心 Benchmark Cases。此外，还提供带有人物区域 Mask 标注的人像子集，用于更加细粒度的 Region-Level Evaluation。
+MMArt-Bench 包含 **人像（Portrait）、风景（Landscape）、街景（Street Scenes）和静物（Still Life）**四类主要场景，每类包含 50 个评测实例，共计 **200 个 Benchmark Instances**。每个主要类别还进一步划分为多个子类别，以覆盖更加丰富的摄影内容。
 
-与只关注最终视觉效果的传统评测方式不同，MMArt-Bench 更强调一个智能修图 Agent 是否能够在正确完成用户修改需求的同时，保持原图的结构、主体身份、局部区域以及其他不应改变的视觉内容。
+除整体图像层面的评测之外，MMArt-Bench 还提供用于**区域级评测（Region-Level Evaluation）**的人像子集。该子集包含 **50 张以人物为中心的图像及对应的 Mask 标注**，可用于更加细粒度地评估局部区域的照片修饰效果。
 
-因此，它非常适合用于评估具有多模态推理、专业工具调用和多阶段决策能力的智能修图系统。
+MMArt-Bench 可以视为 MMArt 数据体系中的评测组成部分，与 MMArt-PPR10K 等数据集形成互补，为不同场景和不同评测粒度下的 Agentic 照片修饰系统提供标准化评估数据。
 
 ### Links
 
