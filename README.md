@@ -585,7 +585,7 @@ Adobe Lightroom 等专业照片编辑软件具有丰富且高度可调的修图�
 
 JarvisArt 采用 **MLLM 驱动的 Agent 架构**。智能体能够理解用户通过自然语言表达的编辑意图、分析视觉内容，并模仿专业艺术家的推理过程，从而在 Adobe Lightroom 中智能协调超过 **200 个专业修图工具**。
 
-在训练方面，JarvisArt 采用两阶段策略。首先通过 **Chain-of-Thought 监督微调（CoT SFT）**建立基础推理和工具使用能力；随后采用专门面向照片修饰任务设计的 **GRPO-R（Group Relative Policy Optimization for Retouching）**，进一步提升 Agent 的编辑决策能力以及专业工具使用水平。
+在训练方面，JarvisArt 采用两阶段策略。首先通过 **Chain-of-Thought 监督微调（CoT SFT**建立基础推理和工具使用能力；随后采用专门面向照片修饰任务设计的 **GRPO-R（Group Relative Policy Optimization for Retouching）**，进一步提升 Agent 的编辑决策能力以及专业工具使用水平。
 
 为了将 Agent 的高层决策转化为能够在专业软件中真正执行的编辑操作，JarvisArt 进一步提出 **Agent-to-Lightroom Protocol**，实现智能体与 Adobe Lightroom 之间的无缝交互。
 
