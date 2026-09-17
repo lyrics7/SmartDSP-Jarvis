@@ -246,12 +246,6 @@ CleanBench 同时服务于 JarvisIR 的两阶段训练框架。Synthetic 数据�
 
 因此，CleanBench 不仅服务于低层图像恢复任务，还进一步支持面向自动驾驶视觉系统的感知性能研究，在**低层图像恢复（Low-Level Image Restoration）**与**高层自动驾驶视觉感知（High-Level Perception）**之间建立联系。
 
-### Public Releases
-
-- **CleanBench-Synthetic** — approximately 150K synthetic instruction-response pairs in the complete CleanBench definition
-- **CleanBench-Real** — approximately 80K real-world instruction-response pairs in the complete CleanBench definition
-- **CleanBench-Real-80K** — publicly released real-world data for training and evaluation
-- **CleanBench-Test (Paper Test)** — test data released for reproducing the experiments reported in the paper
 
 ### Links
 
@@ -504,7 +498,7 @@ Overall, JarvisX-Cowork positions AI not merely as a single-purpose generation t
 
 JarvisX-Cowork 将这些能力整合到统一的创意工作流中。一个典型流程可以从空白创意空间开始，通过 **WebSearch** 搜索参考内容，随后进行图像生成，再借助 **Adobe Lightroom** 等专业工具完成视觉优化，并进一步生成视频以及制作 Demo、Presentation Deck 或 Document 等最终成果。
 
-在单独的生成与编辑工具之外，JarvisX-Cowork 还通过**持续规划（Persistent Planning）、共享记忆（Shared Memory）以及结构化工具接口（Structured Tool Interfaces）**帮助 Agent 在较长的任务过程中保持连贯的项目状态。同时，它还具备文件操作、命令执行、Web 信息获取、任务规划以及 Human-in-the-Loop 权限确认等通用 Agent 能力。
+在单独的生成与编辑工具之外，JarvisX-Cowork 还通过**持续规划、共享记忆以及结构化工具接口**帮助 Agent 在较长的任务过程中保持连贯的项目状态。同时，它还具备文件操作、命令执行、Web 信息获取、任务规划以及 Human-in-the-Loop 权限确认等通用 Agent 能力。
 
 需要注意的是，**JarvisX-Cowork 本身并不是一个新的生成式基础模型**。更准确地说，它是一个面向个人创作场景的 **End-to-End Creative-Agent Harness / Application**，通过统一工作环境对已有模型、专业工具和 Creative Skills 进行组织与调用。
 
@@ -668,7 +662,7 @@ Overall, JarvisIR establishes a connection between **low-level image restoration
 
 JarvisIR 的核心思想是让 **VLM 充当整个恢复系统的 Controller**。系统并不依赖单一固定恢复模型，而是由 VLM 分析当前输入图像的退化情况、规划恢复任务、选择合适的专业恢复模型，并协调多个 Expert Restoration Models 的执行，从而处理复杂且耦合的真实世界图像退化。
 
-在训练方面，JarvisIR 采用由 **Supervised Fine-Tuning（SFT）**和 **Human Feedback Alignment** 组成的两阶段框架。Human Feedback Alignment 使 VLM 能够在缺少成对 Ground Truth 的情况下有效利用大规模真实退化数据，同时进一步提升系统鲁棒性、减少幻觉并增强真实恶劣天气环境下的泛化能力。
+在训练方面，JarvisIR 采用由 **Supervised Fine-Tuning**和 **Human Feedback Alignment** 组成的两阶段框架。Human Feedback Alignment 使 VLM 能够在缺少成对 Ground Truth 的情况下有效利用大规模真实退化数据，同时进一步提升系统鲁棒性、减少幻觉并增强真实恶劣天气环境下的泛化能力。
 
 为了支持系统训练与评测，项目进一步构建了 **CleanBench**，其中包含约 **15 万组合成数据和 8 万组真实数据对应的 Instruction-Response Entries**。
 
