@@ -153,9 +153,9 @@ MMArt-Bench serves as the evaluation component of the MMArt ecosystem, complemen
 
 **MMArt-Bench** 是 JarvisArt 项目提出的**照片修饰评测基准**，用于对 Agentic 照片修饰系统的性能进行综合评估。该 Benchmark 从更大的**MMArt 数据集**中采样构建，并覆盖多种真实摄影场景。
 
-MMArt-Bench 包含 **人像（Portrait）、风景（Landscape）、街景（Street Scenes）和静物（Still Life）**四类主要场景，每类包含 50 个评测实例，共计 **200 个 Benchmark Instances**。每个主要类别还进一步划分为多个子类别，以覆盖更加丰富的摄影内容。
+MMArt-Bench 包含 **人像、风景、街景和静物**四类主要场景，每类包含 50 个评测实例，共计 **200 个 Benchmark Instances**。每个主要类别还进一步划分为多个子类别，以覆盖更加丰富的摄影内容。
 
-除整体图像层面的评测之外，MMArt-Bench 还提供用于**区域级评测（Region-Level Evaluation）**的人像子集。该子集包含 **50 张以人物为中心的图像及对应的 Mask 标注**，可用于更加细粒度地评估局部区域的照片修饰效果。
+除整体图像层面的评测之外，MMArt-Bench 还提供用于**区域级评测**的人像子集。该子集包含 **50 张以人物为中心的图像及对应的 Mask 标注**，可用于更加细粒度地评估局部区域的照片修饰效果。
 
 MMArt-Bench 可以视为 MMArt 数据体系中的评测组成部分，与 MMArt-PPR10K 等数据集形成互补，为不同场景和不同评测粒度下的 Agentic 照片修饰系统提供标准化评估数据。
 
@@ -244,7 +244,7 @@ By supporting both intelligent restoration decision-making and downstream percep
 
 CleanBench 同时服务于 JarvisIR 的两阶段训练框架。Synthetic 数据用于监督微调，使模型学习指令跟随和图像退化识别能力；CleanBench-Real 则用于 Human Feedback Alignment，以进一步提升系统在真实恶劣天气条件下的鲁棒性、降低幻觉并增强泛化能力。
 
-因此，CleanBench 不仅服务于低层图像恢复任务，还进一步支持面向自动驾驶视觉系统的感知性能研究，在**低层图像恢复（Low-Level Image Restoration）**与**高层自动驾驶视觉感知（High-Level Perception）**之间建立联系。
+因此，CleanBench 不仅服务于低层图像恢复任务，还进一步支持面向自动驾驶视觉系统的感知性能研究，在**低层图像恢复** 与 **高层自动驾驶视觉感知**之间建立联系。
 
 
 ### Links
