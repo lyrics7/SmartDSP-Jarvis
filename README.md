@@ -554,6 +554,26 @@ Yunlong Lin, Zixu Lin, Kunjie Lin, Jinbin Bai, Panwang Pan, Chenxin Li, Haoyu Ch
 </td>
 </tr>
 </table>
+
+<div align="center">
+<table>
+  <tr>
+    <th align="center">Before</th>
+    <th align="center">After · JarvisArt</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://jarvisart.vercel.app/assets/results/0/original.jpg" height="200" alt="Before retouching">
+    </td>
+    <td align="center">
+      <img src="https://jarvisart.vercel.app/assets/results/0/processed.jpg" height="200" alt="After retouching">
+    </td>
+  </tr>
+</table>
+
+<sub>Photo-retouching example · <a href="https://jarvisart.vercel.app/">More examples ↗</a></sub>
+</div>
+
 ### English Introduction
 
 **JarvisArt** is an **MLLM-driven intelligent photo-retouching agent** designed to bridge the gap between high-level human artistic intentions and professional image-editing operations.
