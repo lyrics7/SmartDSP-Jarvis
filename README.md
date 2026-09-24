@@ -17,7 +17,64 @@ A curated collection of **datasets, benchmarks, research publications, and open-
 ## Overview
 
 The **SmartDSP Jarvis Research Collection** brings together a series of research efforts exploring the evolution of intelligent visual systems — from specialized image restoration and professional photo editing toward increasingly autonomous, adaptive, and collaborative multimodal agents.
+<div align="center">
 
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Before</th>
+    <th>After</th>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <a href="#jarvisart"><b>JarvisArt</b></a><br>
+      <sub>Photo Retouching</sub>
+    </td>
+    <td align="center">
+      <img src="https://jarvisart.vercel.app/assets/results/0/original.jpg"
+           height="150" alt="JarvisArt input">
+    </td>
+    <td align="center">
+      <img src="https://jarvisart.vercel.app/assets/results/0/processed.jpg"
+           height="150" alt="JarvisArt output">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <a href="#jarvisevo"><b>JarvisEvo</b></a><br>
+      <sub>Photo Editing</sub>
+    </td>
+    <td align="center">
+      <img src="https://jarvisevo.vercel.app/api/image-proxy?path=LRC%2Fcn%2Fffe90c74-4c54-4f8f-8f9e-61851d6c3cb2%2Fbefore.jpg"
+           height="150" alt="JarvisEvo input">
+    </td>
+    <td align="center">
+      <img src="https://jarvisevo.vercel.app/api/image-proxy?path=LRC%2Fcn%2Fffe90c74-4c54-4f8f-8f9e-61851d6c3cb2%2FMR_image%2Fround_1_processed_before.jpg"
+           height="150" alt="JarvisEvo output">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <a href="#jarvisir"><b>JarvisIR</b></a><br>
+      <sub>Image Restoration</sub>
+    </td>
+    <td align="center">
+      <img src="https://cvpr2025-jarvisir.github.io/results/before/img8.png"
+           height="150" alt="JarvisIR degraded input">
+    </td>
+    <td align="center">
+      <img src="https://cvpr2025-jarvisir.github.io/results/after/img8.png"
+           height="150" alt="JarvisIR restored output">
+    </td>
+  </tr>
+</table>
+
+<sub>Selected input–output examples from the official project websites.</sub>
+
+</div>
 The collection is organized into three major components:
 
 - **Datasets & Benchmarks** — Public resources supporting the training, development, and evaluation of intelligent visual agents, including **CleanBench** for instruction-following image restoration, **MMArt-PPR10K** for agentic professional photo retouching, **MMArt-Bench** for multiscenario and region-level retouching evaluation, and **ArtEdit-Bench** for fine-grained editing and self-evaluation assessment.
